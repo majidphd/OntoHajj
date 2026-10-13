@@ -1,9 +1,20 @@
 cff-version: 1.2.0
 message: "If you use this software or data, please cite it as below."
 title: "OntoHajj: Ontology-Guided Neuro-Symbolic Decision Support Framework, Hajj Navigation Ontology and HajjNavQA Benchmark"
-version: 1.0.0
+version: 1.0.1
 date-released: 2026-10-14
 license: MIT
+abstract: >-
+  Reference implementation of OntoHajj, an ontology-guided neuro-symbolic decision support
+  framework for mitigating large language model (LLM) hallucinations in Hajj navigation.
+  The package contains the Hajj Navigation Ontology (HNO, OWL 2) with SHACL shapes for
+  safety constraints C1-C8, the prototype knowledge graph for season 1447H, the bilingual
+  Arabic-English HajjNavQA benchmark (736 questions), the source code of layers L2-L6
+  (entity linking, ontology-guided retrieval, multi-criteria route decision, SHACL
+  verification, repair and abstention), the evaluation scripts, and every answer of every
+  evaluated setting for Qwen2.5-7B and gpt-oss-120b. Camp layouts, closures, dispatch slots
+  and crowd observations are synthetic.
+repository-code: "https://github.com/majidphd/OntoHajj"
 authors:
   - family-names: Alzahrani
     given-names: Majid
