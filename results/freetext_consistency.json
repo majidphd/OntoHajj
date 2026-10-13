@@ -1,0 +1,634 @@
+{
+ "openai_gpt-oss-120b/C1": {
+  "answered": 83,
+  "fabricated": 2,
+  "ungrounded_entity": 12,
+  "ungrounded_time": 17,
+  "any": 26,
+  "any_but_claims_ok": 3,
+  "rate_any": 0.3133,
+  "examples": [
+   {
+    "id": "HNQ-0082-AR",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Group_G22"
+    ],
+    "ungrounded_time": [
+     "20:00"
+    ],
+    "answer": "لتصل إلى الدور الثاني للجمرات (JamaratLevel_2) في يوم 12 ذو الحجة الساعة 22:00 من مخيم منى م18، يمكنك اتباع الخطوات التالية:\n1. **استخدام مترو المشاعر**: اذهب إلى محطة المترو الأقرب لك في مخيم منى م18 (محطة \"MashaerMetro_M18\").\n2. **ركوب ال"
+   },
+   {
+    "id": "HNQ-0086-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "15:59"
+    ],
+    "answer": "You should take the Mina‑to‑Jamarat shuttle bus. On 10 Dhu al‑Hijjah the bus departs from Camp M05 about 15 minutes before the start of your group’s slot and brings you directly to Jamarat Level 2 in time for the 14:00‑15:59 window. Aim to "
+   },
+   {
+    "id": "HNQ-0089-AR",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "12:00"
+    ],
+    "answer": "في يوم 11 ذو الحجة (2026‑05‑28) الساعة 07:00 يمكنك الخروج من مخيم منى م17 باتباع الخطوات التالية:\n1. استقل حافلة النقل الداخلي (Shuttle Bus) المتجهة إلى ساحة الجمرات (JamaratPlaza). حافلات المخيم تتوقف بانتظام تقريباً كل 10‑15 دقيقة.\n2. عند"
+   },
+   {
+    "id": "HNQ-0094-EN",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Group_G23",
+     "Group_G11"
+    ],
+    "ungrounded_time": [
+     "23:59"
+    ],
+    "answer": "At 19:00 on 12 Dhu al‑Hijjah you should take the Mina‑Jamarat shuttle bus from Camp M16 directly to Jamarat Level 3. The shuttle departs every 15 minutes from the camp’s bus stop and will bring you to the Jamarat area in about 10 minutes, a"
+   },
+   {
+    "id": "HNQ-0096-AR",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Station_Mina2"
+    ],
+    "ungrounded_time": [],
+    "answer": "لتصل إلى الدور الثالث للجمرات (JamaratLevel_3) من مخيم منى م07 في الساعة 13:00 يوم 12 ذو الحجة (2026‑05‑29)، يمكنك اتباع الخطوات التالية:\n1. اخرج من مخيم منى م07 وتوجه إلى أقرب محطة مترو مَشاعر (المحطة التي تخدم منطقة منى).  \n2. استقل قطار "
+   },
+   {
+    "id": "HNQ-0108-EN",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Camp_A10"
+    ],
+    "ungrounded_time": [],
+    "answer": "At 20:30 on 9 Dhu al‑Hijjah you can walk from Camp A07 to Masjid al‑Mashar al‑Haram. The camp is in the Arafat area and Masjid al‑Mashar al‑Haram is located in Muzdalifah, about a 10‑15 minute walk (≈1 km). Follow the signs from the camp to"
+   },
+   {
+    "id": "HNQ-0119-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "10:01"
+    ],
+    "answer": "At 19:10 on 9 Dhu al‑Hijjah the Al Mashaaer Al Mugaddassah Metro is still closed (it reopens only on 10 Dhu al‑Hijjah at 10:01). Therefore you will need to walk from Arafat Camp A10 to the Muzdalifah Medical Centre.\n\n1. Leave Camp A10 and f"
+   },
+   {
+    "id": "HNQ-0121-AR",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Station_Arafat1"
+    ],
+    "ungrounded_time": [],
+    "answer": "في التاسع من ذي الحجة الساعة 23:00 يمكنك الوصول من مخيم عرفات ع10 إلى مسجد المشعر الحرام بهذه الخطوات:\n1. امشِ من مخيمك إلى أقرب محطة قطار مشاعر مقدسة في عرفات (مثلاً محطة عرفات 1). المسافة عادة قليلة وتستغرق بضع دقائق.\n2. استقل قطار المشاع"
+   }
+  ]
+ },
+ "openai_gpt-oss-120b/C2": {
+  "answered": 76,
+  "fabricated": 1,
+  "ungrounded_entity": 7,
+  "ungrounded_time": 14,
+  "any": 17,
+  "any_but_claims_ok": 11,
+  "rate_any": 0.2237,
+  "examples": [
+   {
+    "id": "HNQ-0080-EN",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Station_Mina2"
+    ],
+    "ungrounded_time": [
+     "00:00",
+     "05:59"
+    ],
+    "answer": "En el momento indicado (29 de mayo de 2026 a las 09:30, 12 de Dhu al‑Hijjah) la forma más rápida y segura es caminar todo el trayecto: desde el campamento M19 camine hasta el punto de referencia MinaC (seg 043), continúe a pie hasta la esta"
+   },
+   {
+    "id": "HNQ-0094-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "05:59"
+    ],
+    "answer": "From Camp M16 you can walk to Waypoint MinaB (≈10 min), continue walking to Mina Station 2 (≈6 min), take the Mashaer Metro from Station 2 to Station 3 (≈4 min – the metro is open after 05:59 on 12 Dhu al‑Hijjah), then walk to the Jamarat P"
+   },
+   {
+    "id": "HNQ-0096-AR",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "05:59"
+    ],
+    "answer": "ابدأ من مخيم منى م07:\n1. امشِ من المخيم إلى نقطة عبور MinaA (Seg_015) – حوالي 470 م، 9 دقائق.\n2. امشِ من MinaA إلى محطة منى 1 (Seg_063) – حوالي 300 م، 6 دقائق.\n3. استقل مترو مشاعر من محطة منى 1 إلى محطة منى 2 (Seg_177) – 2.2 كم، 4 دقائق (ال"
+   },
+   {
+    "id": "HNQ-0108-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "18:54"
+    ],
+    "answer": "At 20:30 on 9 Dhu al‑Hijjah you can reach Masjid al‑Mashar al‑Haram from Camp A07 by a short walk to the nearby metro station and then a brief metro ride followed by a short walk. The recommended steps are:\n1. Walk from Camp A07 to Waypoint"
+   },
+   {
+    "id": "HNQ-0119-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "18:54",
+     "19:30"
+    ],
+    "answer": "From Arafat camp A10 you can reach Muzdalifah Medical Centre at 19:10 on 9 Dhu al‑Hijjah by the following steps:\n1. Walk from Camp A10 to Waypoint ArafatEast (about 430 m, ~9 min) – Seg_145.\n2. Continue walking from Waypoint ArafatEast to A"
+   },
+   {
+    "id": "HNQ-0131-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "05:59"
+    ],
+    "answer": "The quickest and most comfortable way to reach King Abdulaziz Gate from Mina camp M14 at 06:30 on 10 Dhu al‑Hijjah is:\n1. Walk from Camp M14 to Waypoint MinaB (Seg_031) – about 8 min.\n2. Walk from Waypoint MinaB to Mina Station 2 (Seg_065) "
+   },
+   {
+    "id": "HNQ-0141-AR",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "17:30"
+    ],
+    "answer": "ابدأ بالمشي من مخيم منى م11 إلى نقطة عبور MinaB (حوالي 5.8 دقيقة). ثم امشِ إلى محطة منى 2 (حوالي 6 دقائق). استقل مترو مشاعر من محطة منى 2 إلى محطة منى 1 (المدة تقريباً 4 دقائق). بعد ذلك امشِ إلى نقطة عبور MinaA (حوالي 6 دقائق) ثم إلى محطة ح"
+   },
+   {
+    "id": "HNQ-0149-AR",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "WP_MinaA",
+     "Station_Muzdalifah3"
+    ],
+    "ungrounded_time": [],
+    "answer": "أفضل مسار في الساعة 03:00 من محطة مزدلفة 2 إلى مخيم منى م05 هو:\n1. اركب مترو مَشاعر من محطة مزدلفة 2 إلى محطة مزدلفة 3 (القطعة [Seg_173]).\n2. استمر بالمترو من محطة مزدلفة 3 إلى محطة منى 1 (القطعة [Seg_175]).\n3. امشِ من محطة منى 1 إلى نقطة ع"
+   }
+  ]
+ },
+ "openai_gpt-oss-120b/C4": {
+  "answered": 80,
+  "fabricated": 0,
+  "ungrounded_entity": 0,
+  "ungrounded_time": 0,
+  "any": 0,
+  "any_but_claims_ok": 0,
+  "rate_any": 0.0,
+  "examples": []
+ },
+ "qwen2.5_7b/C0": {
+  "answered": 494,
+  "fabricated": 34,
+  "ungrounded_entity": 54,
+  "ungrounded_time": 44,
+  "any": 121,
+  "any_but_claims_ok": 0,
+  "rate_any": 0.2449,
+  "examples": [
+   {
+    "id": "HNQ-0047-EN",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Station_Mina2"
+    ],
+    "ungrounded_time": [],
+    "answer": "The nearest medical centre to Mina camp M20 is Medical Centre Mina 2 (MC2)."
+   },
+   {
+    "id": "HNQ-0051-EN",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Camp_M06"
+    ],
+    "ungrounded_time": [],
+    "answer": "The nearest medical centre to Mina camp M05 is Medical Centre M06."
+   },
+   {
+    "id": "HNQ-0053-EN",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Camp_M14"
+    ],
+    "ungrounded_time": [],
+    "answer": "The nearest medical centre to Mina camp M13 is Medical Centre M14."
+   },
+   {
+    "id": "HNQ-0063-EN",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Camp_M15"
+    ],
+    "ungrounded_time": [],
+    "answer": "The nearest medical centre to Mina camp M14 is Medical Centre M15."
+   },
+   {
+    "id": "HNQ-0079-AR",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "16:00"
+    ],
+    "answer": "{\n  \"answer\": \"ستبدأ رحلتك من مخيم منى م01 وستمشي إلى محطة المواصلات الرئيسية ثم تأخذ القطار إلى الدور الأرضي للجمرات. تأكد من الوصول قبل بدء طقوس الطواف حول الجمرات.\",\n  \"abstain\": false,\n  \"claims\": [\n    {\"type\":\"route\",\"origin\":\"Camp_M0"
+   },
+   {
+    "id": "HNQ-0085-AR",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "18:30"
+    ],
+    "answer": "{\n  \"answer\": \"أفضل طريق للذهاب من مخيم منى م05 إلى الدور الأول للجمرات في الساعة 19:00 يوم الحادي عشر من ذي الحجة هو استخدام مترو مكة المكرمة. ينصح بالانطلاق قريباً من الساعة 18:30 لضمان الوصول في الوقت المناسب.\",\n  \"abstain\": false,\n  \"cl"
+   },
+   {
+    "id": "HNQ-0095-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "19:45"
+    ],
+    "answer": "From Camp M06, you should take the Mashaer Metro to Jamarat Level 1. The next available train departs at 19:30, so you will arrive at Jamarat Level 1 around 19:45."
+   },
+   {
+    "id": "HNQ-0095-AR",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "18:30"
+    ],
+    "answer": "{\n  \"answer\": \"أفضل طريق للذهاب من مخيم منى م06 إلى الدور الأول للجمرات في الساعة 19:00 يوم الثاني عشر من ذي الحجة هو استخدام مترو مكة المكرمة. ينصح بالانطلاق قريباً من الساعة 18:30 لضمان الوصول في الوقت المحدد.\",\n  \"abstain\": false,\n  \"cla"
+   }
+  ]
+ },
+ "qwen2.5_7b/C1": {
+  "answered": 495,
+  "fabricated": 34,
+  "ungrounded_entity": 147,
+  "ungrounded_time": 131,
+  "any": 222,
+  "any_but_claims_ok": 21,
+  "rate_any": 0.4485,
+  "examples": [
+   {
+    "id": "HNQ-0036-AR",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "12:00"
+    ],
+    "answer": "{\n  \"answer\": \"مركز مزدلفة الطبي يقع في مشعر مزدلفة.\",\n  \"abstain\": false,\n  \"claims\": [\n    {\"type\":\"location\",\"facility\":\"MedicalPoint_Muzdalifah\",\"site\":\"Muzdalifah\",\"source\":\"Passage1\"},\n    {\"type\":\"route\",\"origin\":\"Camp_M07\",\"destinat"
+   },
+   {
+    "id": "HNQ-0078-EN",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Group_G05"
+    ],
+    "ungrounded_time": [
+     "14:00",
+     "15:59"
+    ],
+    "answer": "{\n  \"answer\": \"From Camp M24, you should follow the standard route to Jamarat Level 3 for your dispatch slot. The dispatch slot for your group G05 is from 14:00 to 15:59 on 10 Dhu al-Hijjah. Please ensure you are at the designated area by 1"
+   },
+   {
+    "id": "HNQ-0078-AR",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Group_G07"
+    ],
+    "ungrounded_time": [
+     "14:30",
+     "16:29"
+    ],
+    "answer": "ابدأ رحلتك من مخيم منى م24 في الساعة 15:30. ستصل إلى الدور الثالث للجمرات في الوقت المناسب لتفويج المجموعة ج07 الذي يبدأ رمي الجمرات الثلاث في هذا الدور من الساعة 14:30 إلى 16:29."
+   },
+   {
+    "id": "HNQ-0079-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "06:00",
+     "23:59"
+    ],
+    "answer": "{\n  \"answer\": \"From Camp M01, you should head to Jamarat ground level (JamaratLevel_0) to participate in the stoning of Jamarat al-Aqabah. The operational window for this ritual on 10 Dhu al-Hijjah is from 06:00 to 23:59 (2026-05-27T06:00 t"
+   },
+   {
+    "id": "HNQ-0080-EN",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Group_G12"
+    ],
+    "ungrounded_time": [
+     "12:30",
+     "14:29"
+    ],
+    "answer": "{\n  \"answer\": \"From Camp M19, you should take the Mashaer Metro to JamaratLevel_0 at 09:30 on 12 Dhu al-Hijjah. The nearest dispatch slot for your group is from 12 Dhu al-Hijjah 12:30 to 12 Dhu al-Hijjah 14:29, but you can board the metro e"
+   },
+   {
+    "id": "HNQ-0081-EN",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Group_G18"
+    ],
+    "ungrounded_time": [
+     "12:00",
+     "17:59"
+    ],
+    "answer": "{\n  \"answer\": \"From your location at Camp M08, you can walk to Jamarat ground level [JamaratLevel_0] at 2026-05-29T07:00. The walk is approximately 150 meters and will take about 3 minutes. Please note that the Jamarat Plaza is closed betwe"
+   },
+   {
+    "id": "HNQ-0081-AR",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Group_G08"
+    ],
+    "ungrounded_time": [
+     "06:00",
+     "07:59"
+    ],
+    "answer": "{\n  \"answer\": \"ابدأ رحلتك من مخيم منى م08 في الساعة 07:00 واتجه إلى الدور الأرضي للجمرات JamaratLevel_0. يمكنك استخدام المترو Mashaer Metro أو الحافلة لنقلك. تأكد من الالتزام بالمواعيد المحددة لتفويج المجموعة ج08 لرمي جمرة العقبة، حيث سيتم "
+   },
+   {
+    "id": "HNQ-0082-EN",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Group_G22"
+    ],
+    "ungrounded_time": [
+     "20:30",
+     "22:29"
+    ],
+    "answer": "{\n  \"answer\": \"From your current location at Camp M18, you should head to Jamarat Level 2 for the stoning ritual on 12 Dhu al-Hijjah at 22:00. Your dispatch slot is with group G22, which is from 20:30 to 22:29. Please ensure you follow the "
+   }
+  ]
+ },
+ "qwen2.5_7b/C2": {
+  "answered": 483,
+  "fabricated": 22,
+  "ungrounded_entity": 39,
+  "ungrounded_time": 46,
+  "any": 92,
+  "any_but_claims_ok": 18,
+  "rate_any": 0.1905,
+  "examples": [
+   {
+    "id": "HNQ-0078-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "00:00",
+     "05:59"
+    ],
+    "answer": "From Mina camp M24, you can walk to Mina Station 3, then take the Mashaer Metro to Jamarat Plaza, and finally walk to Jamarat level 3. The metro is available from 2026-05-25T00:00 to 2026-05-30T05:59. The total journey will take approximate"
+   },
+   {
+    "id": "HNQ-0081-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "07:26"
+    ],
+    "answer": "From Mina camp M08, you can walk to Mina Station 1, then take the Mashaer Metro to Jamarat ground level. The journey will take approximately 26 minutes. Depart from Mina camp M08 at 07:00 and arrive at Jamarat ground level by 07:26."
+   },
+   {
+    "id": "HNQ-0082-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "00:00",
+     "05:59"
+    ],
+    "answer": "From Mina camp M18, you can walk to Mina Medical Centre C (545 m, 4.9 min) and then to Mina Station 3 (300 m, 6.0 min). From Mina Station 3, you can take the Mashaer Metro to Mina Station 2 (2200 m, 4.0 min) and then walk to Waypoint MinaB "
+   },
+   {
+    "id": "HNQ-0089-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "00:00",
+     "05:59"
+    ],
+    "answer": "From Mina camp M17, walk to Mina Medical Centre C (500 m, 4 minutes) and then to Mina Station 3 (300 m, 6 minutes). From Mina Station 3, take the Mashaer Metro to Jamarat Plaza (2200 m, 4 minutes) and walk to Jamarat level 1 (400 m, 8 minut"
+   },
+   {
+    "id": "HNQ-0090-AR",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "00:00",
+     "05:59"
+    ],
+    "answer": "من المخيم M04، يمكنك السير إلى محطة منى 1 ثم استخدام القطارات المخصصة للجمرات لرحلة Mina 2 ثم Mina 3، ثم السير إلى نقطة عبور الجمرات وصولاً إلى الدور الثالث للجمرات. يرجى الانتباه إلى أن محطة منى 2 و 3 مغلقة بين الساعة 00:00 و 05:59 من يوم "
+   },
+   {
+    "id": "HNQ-0099-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "05:59"
+    ],
+    "answer": "From Mina camp M21, walk to Mina Medical Centre C (680 m, 7.6 min) and then to Mina Station 3 (300 m, 6 min). Take the Mashaer Metro from Mina Station 3 to Mina Station 2 (2200 m, 4 min), then walk to Jamarat Plaza (400 m, 8 min) and finall"
+   },
+   {
+    "id": "HNQ-0101-AR",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "00:00",
+     "05:59"
+    ],
+    "answer": "ابدأ رحلتك من مخيم منى م07. سيرًا على الأقدام لمدة 470 متر إلى نقطة عبور MinaA. ثم انتقل إلى محطة منى 1 باستخدام مترو مكة المكرمة لمدة 4 دقائق. استقل مترو مكة المكرمة من محطة منى 2 إلى محطة منى 3 لمدة 4 دقائق. اتبع الطريق السيرًا على الأقدا"
+   },
+   {
+    "id": "HNQ-0105-AR",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Station_Mina2"
+    ],
+    "ungrounded_time": [],
+    "answer": "ابدأ رحلتك من مخيم منى م18. سيرًا على الأقدام لمدة 4.9 دقائق ستصل إلى نقطة عبور MinaC. ثم سيرًا على الأقدام لمدة 6 دقائق ستصل إلى محطة منى 3. استخدم محطة القطار لتصل إلى محطة منى 2، ثم انتقل إلى محطة منى 3 باستخدام القطارات. من هناك، سيرًا "
+   }
+  ]
+ },
+ "qwen2.5_7b/C3": {
+  "answered": 486,
+  "fabricated": 26,
+  "ungrounded_entity": 17,
+  "ungrounded_time": 10,
+  "any": 43,
+  "any_but_claims_ok": 12,
+  "rate_any": 0.0885,
+  "examples": [
+   {
+    "id": "HNQ-0095-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "12:00",
+     "20:00"
+    ],
+    "answer": "From Mina camp M06, you should walk to Waypoint MinaA, then take the Mashaer Metro to Jamarat Plaza, and finally walk to Jamarat level 1. The journey will take approximately 38 minutes. Please ensure you have enough time to reach Jamarat le"
+   },
+   {
+    "id": "HNQ-0113-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "18:54"
+    ],
+    "answer": "From Arafat camp A01, you should walk to Arafat Station 1, then take the Mashaer Metro to Muzdalifah Station 1. The journey will take approximately 25 minutes. Please note that the metro service between Arafat Station 1 and Muzdalifah Stati"
+   },
+   {
+    "id": "HNQ-0118-AR",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Station_Arafat3"
+    ],
+    "ungrounded_time": [
+     "11:01"
+    ],
+    "answer": "{\n  \"answer\": \"من مخيم عرفات ع09، يمكنك السير إلى محطة عرفات 3 (Station_Arafat3) على بعد 720 متر. من هناك، يمكنك انتظار القطار إلى محطة مزدلفة 1 (Station_Muzdalifah1) في الساعة 15:00. تأكد من أنك تصل إلى محطة عرفات 3 قبل الساعة 11:01 من يوم"
+   },
+   {
+    "id": "HNQ-0123-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "18:54"
+    ],
+    "answer": "From Arafat camp A03, you should walk to Arafat Station 1, then take the Mashaer Metro to Muzdalifah Station 1. The journey will take approximately 27 minutes. Please be aware that the metro service between Arafat Station 1 and Muzdalifah S"
+   },
+   {
+    "id": "HNQ-0124-EN",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Station_Muzdalifah1"
+    ],
+    "ungrounded_time": [],
+    "answer": "From Arafat camp A02, you should take the Mashaer Metro to Muzdalifah Station 1 and then walk to Masjid al-Mashar al-Haram. The journey will take approximately 1 hour and 30 minutes, including the metro ride and the walk. Please ensure you "
+   },
+   {
+    "id": "HNQ-0126-EN",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Med_ArafatWest"
+    ],
+    "ungrounded_time": [
+     "20:00",
+     "20:30"
+    ],
+    "answer": "{\n  \"answer\": \"From Arafat camp A06, you can walk to Arafat West Medical Centre, which is the nearest medical centre. From there, you can take the Mashaer Metro to Muzdalifah. The journey will take approximately 1 hour and 30 minutes. Pleas"
+   },
+   {
+    "id": "HNQ-0166-AR",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Camp_M24"
+    ],
+    "ungrounded_time": [],
+    "answer": "تفويج المجموعة ج24 لرمي جمرة العقبة سيبدأ في 27 ذو الحجة الساعة 10:00 (2026-05-27T10:00) في الدور الثاني من الجمرات. يرجى التوجه إلى مخيم منى م24 لبدء رمي الجمرة."
+   },
+   {
+    "id": "HNQ-0173-AR",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Camp_A07"
+    ],
+    "ungrounded_time": [],
+    "answer": "تفويج المجموعة ج13 لرمي الجمرات الثلاث يوم 11 يبدأ في الدور الأرضي للجمرات [JamaratLevel_0] من الساعة 12:30 إلى الساعة 14:29. يرجى البقاء في مخيم عرفات ع07 حتى ذلك الوقت."
+   }
+  ]
+ },
+ "qwen2.5_7b/C4": {
+  "answered": 399,
+  "fabricated": 0,
+  "ungrounded_entity": 7,
+  "ungrounded_time": 3,
+  "any": 10,
+  "any_but_claims_ok": 10,
+  "rate_any": 0.0251,
+  "examples": [
+   {
+    "id": "HNQ-0095-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "12:00",
+     "20:00"
+    ],
+    "answer": "From Mina camp M06, you should walk to Waypoint MinaA, then take the Mashaer Metro to Jamarat Plaza, and finally walk to Jamarat level 1. The journey will take approximately 38 minutes. Please ensure you have enough time to reach Jamarat le"
+   },
+   {
+    "id": "HNQ-0113-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "18:54"
+    ],
+    "answer": "From Arafat camp A01, you should walk to Arafat Station 1, then take the Mashaer Metro to Muzdalifah Station 1. The journey will take approximately 25 minutes. Please note that the metro service between Arafat Station 1 and Muzdalifah Stati"
+   },
+   {
+    "id": "HNQ-0123-EN",
+    "fabricated": false,
+    "ungrounded_entity": [],
+    "ungrounded_time": [
+     "06:54"
+    ],
+    "answer": "From Arafat camp A03, you should walk to Arafat Station 1, then take the Mashaer Metro to Muzdalifah Station 1. The journey will take approximately 27 minutes. Please note that the metro service between Arafat Station 1 and Muzdalifah Stati"
+   },
+   {
+    "id": "HNQ-0160-EN",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "JamaratLevel_0"
+    ],
+    "ungrounded_time": [],
+    "answer": "The dispatch slot for group G11 for the Stoning of Jamarat al-Aqabah at Jamarat ground level starts at 12:00 on 10 Dhu al-Hijjah (2026-05-27T12:00) and ends at 13:59 on the same day. The ritual takes place at Jamarat level 1."
+   },
+   {
+    "id": "HNQ-0171-AR",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Camp_M03"
+    ],
+    "ungrounded_time": [],
+    "answer": "تفويج المجموعة ج03 لرمي الجمرات الثلاث يوم 12 سيبدأ في الدور الثالث للجمرات [JamaratLevel_3] من الساعة 18:30 إلى الساعة 20:29. يرجى التوجه إلى مخيم منى م03 [Camp_M03] لبدء رحلتك."
+   },
+   {
+    "id": "HNQ-0173-AR",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Camp_M13"
+    ],
+    "ungrounded_time": [],
+    "answer": "تفويج المجموعة ج13 لرمي الجمرات الثلاث يوم 11 يبدأ في الدور الأرضي للجمرات [JamaratLevel_0] من الساعة 12:30 إلى الساعة 14:29. يرجى البقاء في مخيم منى م13 [Camp_M13] قبل الذهاب إلى الجمرات."
+   },
+   {
+    "id": "HNQ-0176-AR",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Camp_M09"
+    ],
+    "ungrounded_time": [],
+    "answer": "تفويج المجموعة ج09 لرمي الجمرات الثلاث يوم 11 سيبدأ في الدور الأرضي للجمرات [JamaratLevel_0] من الساعة 16:30 إلى الساعة 18:29. يرجى التوجه إلى الدور الأرضي للجمرات من مخيم منى م09."
+   },
+   {
+    "id": "HNQ-0182-AR",
+    "fabricated": false,
+    "ungrounded_entity": [
+     "Camp_M21"
+    ],
+    "ungrounded_time": [],
+    "answer": "تفويج المجموعة ج21 لرمي الجمرات الثلاث يوم 11 ذو الحجة سيبدأ في الدور الأرضي للجمرات [JamaratLevel_0] من الساعة 16:30 إلى الساعة 18:29. يرجى التوجه إلى الدور الأرضي للجمرات من مخيم منى م21."
+   }
+  ]
+ }
+}

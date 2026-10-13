@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this software or data, please cite it as below."
 title: "OntoHajj: Ontology-Guided Neuro-Symbolic Decision Support Framework, Hajj Navigation Ontology and HajjNavQA Benchmark"
-version: 1.0.1
+version: 1.1.0
 date-released: 2026-10-14
 license: MIT
 abstract: >-

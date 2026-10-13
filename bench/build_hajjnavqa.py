@@ -49,6 +49,21 @@ for i, c in enumerate(src_points[:40]):
         f"The nearest {en_t} is {L(n, 'en')} ({int(d)} m on foot).", f"أقرب {ar_t} هو {L(n, 'ar')} ({int(d)} م سيرًا).")
 
 # ---------------- Q2 Route (80) ----------------
+
+def qa_ref(t, sl, dec):
+    """reference text of a schedule+route question: the slot and, when feasible, the route (v1.1)"""
+    en = f"Slot at {fmt(t, 'en')}, {L(sl['facility'], 'en')}."
+    ar = f"الموعد {fmt(t, 'ar')}، {L(sl['facility'], 'ar')}."
+    if dec["best"] is not None:
+        segs = dec["best"]["segments"]
+        stops = [kg.seg[segs[0]]["from"]] + [kg.seg[x]["to"] for x in segs]
+        en += " Route: " + " → ".join(L(x, "en") for x in stops)
+        ar += " المسار: " + " ← ".join(L(x, "ar") for x in stops)
+    else:
+        en += " No feasible route at this time; refer to the service provider."
+        ar += " لا يوجد مسار ممكن في هذا الوقت؛ يُحال إلى مقدم الخدمة."
+    return en, ar
+
 def route_item(cat, o, d, day, hm, profile, q_en, q_ar):
     t = dt(day, hm)
     dec = decide(kg, o, d, t, profile)
@@ -135,7 +150,7 @@ for gr in random.sample(groups, 24) + random.sample(groups, 1):
     add("Q5", f"We are {L(gr, 'en')}. When does our dispatch slot for the {L(r, 'en')} start, and how do we get from our Mina camp to the assigned Jamarat level at that time?",
         f"نحن {L(gr, 'ar')}. متى يبدأ موعد تفويجنا لـ{L(r, 'ar')}، وكيف نصل من مخيمنا في منى إلى دور الجمرات المخصص في ذلك الوقت؟",
         {"time": iso(t), "group": local(gr), "ritual": local(r), "location": local(camp)}, gold,
-        f"Slot at {fmt(t, 'en')}, {L(sl['facility'], 'en')}.", f"الموعد {fmt(t, 'ar')}، {L(sl['facility'], 'ar')}.",
+        *qa_ref(t, sl, dec),
         expect_abstain=dec["best"] is None)
 
 # ---------------- Q6 Unanswerable (30 non-existent + 15 juristic + 15 out-of-scope) ----------------

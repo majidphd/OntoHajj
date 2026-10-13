@@ -1,0 +1,107 @@
+{
+ "leakage": {
+  "pilot_ids": [
+   "HNQ-0003-EN",
+   "HNQ-0018-AR",
+   "HNQ-0037-EN",
+   "HNQ-0054-AR",
+   "HNQ-0073-EN",
+   "HNQ-0089-AR",
+   "HNQ-0108-EN",
+   "HNQ-0127-AR",
+   "HNQ-0146-EN",
+   "HNQ-0160-AR",
+   "HNQ-0178-EN",
+   "HNQ-0195-AR",
+   "HNQ-0215-EN",
+   "HNQ-0231-AR",
+   "HNQ-0252-EN",
+   "HNQ-0271-AR",
+   "HNQ-0289-EN",
+   "HNQ-0305-AR",
+   "HNQ-0324-EN",
+   "HNQ-0340-AR"
+  ],
+  "excluded_with_pairs": 40,
+  "n_remaining": 474,
+  "settings": {
+   "C0": {
+    "Acc": 0.0464,
+    "HR": 0.9763,
+    "OHR": 0.3714,
+    "CVR": 0.3969,
+    "Cov": 0.962,
+    "SelAcc": 0.0154,
+    "AbsF1": 0.2586
+   },
+   "C1": {
+    "Acc": 0.3376,
+    "HR": 0.519,
+    "OHR": 0.1307,
+    "CVR": 0.25,
+    "Cov": 0.962,
+    "SelAcc": 0.3114,
+    "AbsF1": 0.3103
+   },
+   "C2": {
+    "Acc": 0.5169,
+    "HR": 0.1389,
+    "OHR": 0.0096,
+    "CVR": 0.3258,
+    "Cov": 0.9388,
+    "SelAcc": 0.4854,
+    "AbsF1": 0.4567
+   },
+   "C3": {
+    "Acc": 0.7975,
+    "HR": 0.0417,
+    "OHR": 0.013,
+    "CVR": 0.0738,
+    "Cov": 0.943,
+    "SelAcc": 0.7852,
+    "AbsF1": 0.432
+   },
+   "C4": {
+    "Acc": 0.9536,
+    "HR": 0.0,
+    "OHR": 0.0,
+    "CVR": 0.0,
+    "Cov": 0.7679,
+    "SelAcc": 0.9863,
+    "AbsF1": 0.8942
+   }
+  }
+ },
+ "l2_refusal": {
+  "non-existent": {
+   "n": 42,
+   "refused_by_L2": 42,
+   "abstained_overall": 42
+  },
+  "juristic": {
+   "n": 24,
+   "refused_by_L2": 18,
+   "abstained_overall": 21
+  },
+  "out-of-scope": {
+   "n": 18,
+   "refused_by_L2": 8,
+   "abstained_overall": 16
+  }
+ },
+ "q3": {
+  "n": 72,
+  "C2": 55,
+  "C3": 50,
+  "C4": 55,
+  "p_S2_vs_S3": 0.0625
+ },
+ "crowd_tradeoff": {
+  "rstar_differs": 34,
+  "less_crowded": 10,
+  "more_crowded": 22,
+  "equal": 2,
+  "more_crowded_mean_increase": 0.471,
+  "more_crowded_mean_safety_gain": 0.203
+ }
+}

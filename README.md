@@ -68,6 +68,23 @@ python eval/summarise_llm.py openai_gpt-oss-120b/test_v2
 `bench/annotation_sample_ids.txt` lists the 100 test questions (random, seed 2026) checked by two
 annotators; agreement is reported as Cohen's kappa.
 
+## Additional analyses (v1.1)
+| Script | What it does |
+|---|---|
+| `eval/reviewer_analyses.py` | results without the 20 pilot questions and their translations; L2 refusal recall; Q3 S2-vs-S3 test; crowd-exposure trade-off of r* |
+| `eval/freetext_consistency.py` | lexical check of the free-text answer against its typed claims, for every answered question |
+| `eval/llm_judge_freetext.py` | Experiment B1: an independent LLM judges whether the free text contradicts or goes beyond the claims (sample of S2–S4 answers) |
+| `eval/llm_judge_e3.py` | Experiment B2: LLM-as-judge baseline (claim vs. reference passages) for the hallucination-injection study |
+| `notebooks/gpu_timing_colab.ipynb` | Experiment B3: S4 and S2 on a free Colab GPU, same 100 questions, for latency |
+
+The two judge scripts use the same environment variables as `run_llm_eval.py` (e.g. GroqCloud) and can be stopped
+and restarted; results go to `results/judge/`.
+
+**Benchmark note.** In v1.1 the reference *text* of the 50 schedule-and-route questions of Q5 also states the route
+(found during the manual check); the gold claims, which are used for scoring, are unchanged. The released
+`data/hajjnavqa.jsonl` is the canonical benchmark; re-running `bench/build_hajjnavqa.py` produces an equivalent
+benchmark whose random choices can differ with the Python hash seed.
+
 ## Useful environment variables
 | Variable | Default | Meaning |
 |---|---|---|
