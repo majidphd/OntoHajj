@@ -1,0 +1,133 @@
+@prefix hno:  <https://w3id.org/ontohajj/hno#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+<https://w3id.org/ontohajj/hno> a owl:Ontology ;
+    rdfs:label "Hajj Navigation Ontology (HNO)"@en , "أنطولوجيا التنقل في الحج"@ar ;
+    dct:description "OWL 2 ontology for grounding and verifying LLM-based navigation guidance during Hajj."@en ;
+    owl:versionInfo "1.0.0" ;
+    rdfs:seeAlso <http://www.w3.org/2006/time> .
+
+######## Top-level classes ########
+hno:NamedEntity a owl:Class ; rdfs:label "Named entity"@en , "كيان مسمى"@ar ;
+    rdfs:comment "Any entity that may be mentioned in an answer and must exist in the knowledge graph (constraint C1)."@en .
+
+hno:Location a owl:Class ; rdfs:subClassOf hno:NamedEntity ; rdfs:label "Location"@en , "موقع"@ar .
+hno:HolySite a owl:Class ; rdfs:subClassOf hno:Location ; rdfs:label "Holy site"@en , "مشعر"@ar .
+hno:Facility a owl:Class ; rdfs:subClassOf hno:Location ; rdfs:label "Facility"@en , "مرفق"@ar .
+hno:Waypoint a owl:Class ; rdfs:subClassOf hno:Location ; rdfs:label "Waypoint"@en , "نقطة عبور"@ar .
+
+hno:Camp a owl:Class ; rdfs:subClassOf hno:Facility ; rdfs:label "Camp"@en , "مخيم"@ar .
+hno:Gate a owl:Class ; rdfs:subClassOf hno:Facility ; rdfs:label "Gate"@en , "باب"@ar .
+hno:MetroStation a owl:Class ; rdfs:subClassOf hno:Facility ; rdfs:label "Metro station"@en , "محطة قطار"@ar .
+hno:JamaratLevel a owl:Class ; rdfs:subClassOf hno:Facility ; rdfs:label "Jamarat level"@en , "دور الجمرات"@ar .
+hno:MedicalPoint a owl:Class ; rdfs:subClassOf hno:Facility ; rdfs:label "Medical point"@en , "مركز طبي"@ar .
+hno:Mosque a owl:Class ; rdfs:subClassOf hno:Facility ; rdfs:label "Mosque"@en , "مسجد"@ar .
+hno:BusStation a owl:Class ; rdfs:subClassOf hno:Facility ; rdfs:label "Bus station"@en , "محطة حافلات"@ar .
+
+hno:TransportMode a owl:Class ; rdfs:subClassOf hno:NamedEntity ; rdfs:label "Transport mode"@en , "وسيلة نقل"@ar .
+hno:Ritual a owl:Class ; rdfs:subClassOf hno:NamedEntity ; rdfs:label "Ritual"@en , "نسك"@ar .
+hno:StoningRitual a owl:Class ; rdfs:subClassOf hno:Ritual ; rdfs:label "Stoning ritual"@en , "رمي الجمرات"@ar .
+hno:StayRitual a owl:Class ; rdfs:subClassOf hno:Ritual ; rdfs:label "Stay ritual"@en , "مبيت أو وقوف"@ar .
+hno:PilgrimGroup a owl:Class ; rdfs:subClassOf hno:NamedEntity ; rdfs:label "Pilgrim group"@en , "مجموعة حجاج"@ar .
+hno:PilgrimProfile a owl:Class ; rdfs:subClassOf hno:NamedEntity ; rdfs:label "Pilgrim profile"@en , "ملف الحاج"@ar .
+
+hno:PathSegment a owl:Class ; rdfs:label "Path segment"@en , "مقطع مسار"@ar .
+hno:TimeWindow a owl:Class ; rdfs:subClassOf time:ProperInterval ; rdfs:label "Time window"@en , "نافذة زمنية"@ar .
+hno:Schedule a owl:Class ; rdfs:label "Schedule"@en , "جدول"@ar .
+hno:TafweejSlot a owl:Class ; rdfs:subClassOf hno:Schedule ; rdfs:label "Dispatch (Tafweej) slot"@en , "موعد تفويج"@ar .
+hno:CrowdObservation a owl:Class ; rdfs:label "Crowd observation"@en , "رصد الكثافة"@ar .
+hno:CrowdLevel a owl:Class ; rdfs:label "Crowd level"@en , "مستوى الكثافة"@ar .
+hno:Source a owl:Class ; rdfs:label "Source"@en , "مصدر"@ar .
+
+# Answer-level classes used by the verifier (Layer 5)
+hno:Claim a owl:Class ; rdfs:label "Claim"@en , "ادعاء"@ar .
+hno:LocationClaim a owl:Class ; rdfs:subClassOf hno:Claim .
+hno:NearestClaim a owl:Class ; rdfs:subClassOf hno:Claim .
+hno:ScheduleClaim a owl:Class ; rdfs:subClassOf hno:Claim .
+hno:RitualTimeClaim a owl:Class ; rdfs:subClassOf hno:Claim .
+hno:RouteRecommendation a owl:Class ; rdfs:subClassOf hno:Claim .
+hno:RouteStep a owl:Class .
+
+######## Disjointness ########
+[] a owl:AllDisjointClasses ; owl:members ( hno:Location hno:TransportMode hno:Ritual hno:PilgrimGroup hno:PilgrimProfile ) .
+[] a owl:AllDisjointClasses ; owl:members ( hno:HolySite hno:Facility hno:Waypoint ) .
+[] a owl:AllDisjointClasses ; owl:members ( hno:Camp hno:Gate hno:MetroStation hno:JamaratLevel hno:MedicalPoint hno:Mosque hno:BusStation ) .
+
+######## Object properties ########
+hno:locatedIn a owl:ObjectProperty , owl:TransitiveProperty ; rdfs:domain hno:Location ; rdfs:range hno:Location ;
+    rdfs:label "located in"@en , "يقع في"@ar .
+hno:fromLocation a owl:ObjectProperty , owl:FunctionalProperty ; rdfs:domain hno:PathSegment ; rdfs:range hno:Location .
+hno:toLocation a owl:ObjectProperty , owl:FunctionalProperty ; rdfs:domain hno:PathSegment ; rdfs:range hno:Location .
+hno:usesMode a owl:ObjectProperty ; rdfs:domain hno:PathSegment ; rdfs:range hno:TransportMode .
+hno:performedAt a owl:ObjectProperty ; rdfs:domain hno:Ritual ; rdfs:range hno:Location .
+hno:precedes a owl:ObjectProperty , owl:TransitiveProperty ; rdfs:domain hno:Ritual ; rdfs:range hno:Ritual .
+hno:hasTimeWindow a owl:ObjectProperty ; rdfs:range hno:TimeWindow .
+hno:restrictedDuring a owl:ObjectProperty ; rdfs:range hno:TimeWindow .
+hno:accessibleFor a owl:ObjectProperty ; rdfs:range hno:PilgrimProfile .
+hno:assignedCamp a owl:ObjectProperty ; rdfs:domain hno:PilgrimGroup ; rdfs:range hno:Camp .
+hno:hasSlot a owl:ObjectProperty ; rdfs:domain hno:PilgrimGroup ; rdfs:range hno:TafweejSlot .
+hno:slotFacility a owl:ObjectProperty ; rdfs:domain hno:TafweejSlot ; rdfs:range hno:JamaratLevel .
+hno:slotRitual a owl:ObjectProperty ; rdfs:domain hno:TafweejSlot ; rdfs:range hno:StoningRitual .
+hno:onSegment a owl:ObjectProperty ; rdfs:domain hno:CrowdObservation ; rdfs:range hno:PathSegment .
+hno:during a owl:ObjectProperty ; rdfs:domain hno:CrowdObservation ; rdfs:range hno:TimeWindow .
+hno:hasLevel a owl:ObjectProperty ; rdfs:domain hno:CrowdObservation ; rdfs:range hno:CrowdLevel .
+hno:derivedFrom a owl:ObjectProperty ; rdfs:range hno:Source .
+
+# claim / route vocabulary
+hno:mentions a owl:ObjectProperty ; rdfs:domain hno:Claim .
+hno:aboutFacility a owl:ObjectProperty ; rdfs:domain hno:Claim .
+hno:claimedSite a owl:ObjectProperty ; rdfs:domain hno:LocationClaim .
+hno:fromPoint a owl:ObjectProperty ; rdfs:domain hno:Claim .
+hno:facilityType a owl:ObjectProperty ; rdfs:domain hno:NearestClaim .
+hno:forGroup a owl:ObjectProperty ; rdfs:domain hno:Claim ; rdfs:range hno:PilgrimGroup .
+hno:claimedFacility a owl:ObjectProperty ; rdfs:domain hno:ScheduleClaim .
+hno:aboutRitual a owl:ObjectProperty ; rdfs:domain hno:Claim ; rdfs:range hno:Ritual .
+hno:origin a owl:ObjectProperty ; rdfs:domain hno:RouteRecommendation ; rdfs:range hno:Location .
+hno:destination a owl:ObjectProperty ; rdfs:domain hno:RouteRecommendation ; rdfs:range hno:Location .
+hno:forProfile a owl:ObjectProperty ; rdfs:domain hno:RouteRecommendation ; rdfs:range hno:PilgrimProfile .
+hno:hasStep a owl:ObjectProperty ; rdfs:domain hno:RouteRecommendation ; rdfs:range hno:RouteStep .
+hno:segment a owl:ObjectProperty ; rdfs:domain hno:RouteStep ; rdfs:range hno:PathSegment .
+
+######## Data properties ########
+hno:lengthMeters a owl:DatatypeProperty , owl:FunctionalProperty ; rdfs:domain hno:PathSegment ; rdfs:range xsd:decimal .
+hno:travelMinutes a owl:DatatypeProperty , owl:FunctionalProperty ; rdfs:domain hno:PathSegment ; rdfs:range xsd:decimal .
+hno:shaded a owl:DatatypeProperty ; rdfs:domain hno:PathSegment ; rdfs:range xsd:boolean .
+hno:capacityPerHour a owl:DatatypeProperty ; rdfs:domain hno:PathSegment ; rdfs:range xsd:integer .
+hno:densityScore a owl:DatatypeProperty ; rdfs:domain hno:CrowdLevel ; rdfs:range xsd:integer .
+hno:stepIndex a owl:DatatypeProperty ; rdfs:domain hno:RouteStep ; rdfs:range xsd:integer .
+hno:plannedAt a owl:DatatypeProperty ; rdfs:range xsd:dateTime .
+hno:claimedStart a owl:DatatypeProperty ; rdfs:range xsd:dateTime .
+hno:claimedEnd a owl:DatatypeProperty ; rdfs:range xsd:dateTime .
+hno:claimedTime a owl:DatatypeProperty ; rdfs:range xsd:dateTime .
+hno:hijriDay a owl:DatatypeProperty ; rdfs:range xsd:integer .
+
+######## Axioms (A1-A6) ########
+# A1: every stoning ritual is performed at a Jamarat level
+hno:StoningRitual rdfs:subClassOf [ a owl:Restriction ; owl:onProperty hno:performedAt ; owl:someValuesFrom hno:JamaratLevel ] .
+# A2: every ritual has a time window
+hno:Ritual rdfs:subClassOf [ a owl:Restriction ; owl:onProperty hno:hasTimeWindow ; owl:someValuesFrom hno:TimeWindow ] .
+# A3: every facility is located in some holy site or in another facility
+hno:Facility rdfs:subClassOf [ a owl:Restriction ; owl:onProperty hno:locatedIn ; owl:someValuesFrom hno:Location ] .
+# A4: step-free segments are exactly those accessible for the wheelchair profile
+hno:StepFreeSegment a owl:Class ; rdfs:label "Step-free segment"@en , "مقطع خالٍ من الدرج"@ar ;
+    owl:equivalentClass [ a owl:Class ; owl:intersectionOf ( hno:PathSegment [ a owl:Restriction ; owl:onProperty hno:accessibleFor ; owl:hasValue hno:Profile_Wheelchair ] ) ] .
+# A5: every path segment has exactly one origin and one end
+hno:PathSegment rdfs:subClassOf [ a owl:Restriction ; owl:onProperty hno:fromLocation ; owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; owl:onClass hno:Location ] ,
+                               [ a owl:Restriction ; owl:onProperty hno:toLocation ; owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; owl:onClass hno:Location ] .
+# A6: every dispatch slot targets exactly one Jamarat level
+hno:TafweejSlot rdfs:subClassOf [ a owl:Restriction ; owl:onProperty hno:slotFacility ; owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ; owl:onClass hno:JamaratLevel ] .
+
+hno:Profile_Wheelchair a hno:PilgrimProfile .
+
+######## Minimal OWL-Time declarations reused (W3C Time Ontology) ########
+time:ProperInterval a owl:Class .
+time:Instant a owl:Class .
+time:hasBeginning a owl:ObjectProperty ; rdfs:range time:Instant .
+time:hasEnd a owl:ObjectProperty ; rdfs:range time:Instant .
+time:inXSDDateTime a owl:DatatypeProperty ; rdfs:domain time:Instant ; rdfs:range xsd:dateTime .

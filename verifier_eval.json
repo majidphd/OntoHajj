@@ -1,0 +1,175 @@
+{
+ "similarity_threshold_tau": 82.96943231441048,
+ "n_test_cases": 907,
+ "detection": {
+  "gold": {
+   "entity_only": {
+    "rate": 0.0,
+    "flagged": 0,
+    "n": 241
+   },
+   "similarity": {
+    "rate": 0.0705,
+    "flagged": 17,
+    "n": 241
+   },
+   "ontohajj": {
+    "rate": 0.0,
+    "flagged": 0,
+    "n": 241
+   }
+  },
+  "entity": {
+   "entity_only": {
+    "rate": 1.0,
+    "flagged": 241,
+    "n": 241
+   },
+   "similarity": {
+    "rate": 0.6556,
+    "flagged": 158,
+    "n": 241
+   },
+   "ontohajj": {
+    "rate": 1.0,
+    "flagged": 241,
+    "n": 241
+   }
+  },
+  "relational": {
+   "entity_only": {
+    "rate": 0.0,
+    "flagged": 0,
+    "n": 180
+   },
+   "similarity": {
+    "rate": 0.0056,
+    "flagged": 1,
+    "n": 180
+   },
+   "ontohajj": {
+    "rate": 1.0,
+    "flagged": 180,
+    "n": 180
+   }
+  },
+  "constraint": {
+   "entity_only": {
+    "rate": 0.0,
+    "flagged": 0,
+    "n": 131
+   },
+   "similarity": {
+    "rate": 0.2214,
+    "flagged": 29,
+    "n": 131
+   },
+   "ontohajj": {
+    "rate": 1.0,
+    "flagged": 131,
+    "n": 131
+   }
+  },
+  "temporal": {
+   "entity_only": {
+    "rate": 0.0,
+    "flagged": 0,
+    "n": 114
+   },
+   "similarity": {
+    "rate": 0.4298,
+    "flagged": 49,
+    "n": 114
+   },
+   "ontohajj": {
+    "rate": 1.0,
+    "flagged": 114,
+    "n": 114
+   }
+  }
+ },
+ "ontohajj_by_claim_type": {
+  "constraint|route": {
+   "rate": 1.0,
+   "n": 86
+  },
+  "constraint|schedule": {
+   "rate": 1.0,
+   "n": 45
+  },
+  "entity|location": {
+   "rate": 1.0,
+   "n": 45
+  },
+  "entity|nearest": {
+   "rate": 1.0,
+   "n": 42
+  },
+  "entity|ritual_time": {
+   "rate": 1.0,
+   "n": 9
+  },
+  "entity|route": {
+   "rate": 1.0,
+   "n": 100
+  },
+  "entity|schedule": {
+   "rate": 1.0,
+   "n": 45
+  },
+  "gold|location": {
+   "rate": 0.0,
+   "n": 45
+  },
+  "gold|nearest": {
+   "rate": 0.0,
+   "n": 42
+  },
+  "gold|ritual_time": {
+   "rate": 0.0,
+   "n": 9
+  },
+  "gold|route": {
+   "rate": 0.0,
+   "n": 100
+  },
+  "gold|schedule": {
+   "rate": 0.0,
+   "n": 45
+  },
+  "relational|location": {
+   "rate": 1.0,
+   "n": 45
+  },
+  "relational|nearest": {
+   "rate": 1.0,
+   "n": 42
+  },
+  "relational|route": {
+   "rate": 1.0,
+   "n": 93
+  },
+  "temporal|ritual_time": {
+   "rate": 1.0,
+   "n": 9
+  },
+  "temporal|route": {
+   "rate": 1.0,
+   "n": 60
+  },
+  "temporal|schedule": {
+   "rate": 1.0,
+   "n": 45
+  }
+ },
+ "correct_constraint_attribution": {
+  "entity": 1.0,
+  "relational": 1.0,
+  "constraint": 1.0,
+  "temporal": 1.0
+ },
+ "verify_latency_ms": {
+  "mean": 175.2,
+  "p95": 440.6
+ }
+}

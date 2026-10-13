@@ -1,0 +1,104 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix hno:  <https://w3id.org/ontohajj/hno#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+hno:Prefixes a owl:Ontology ;
+    sh:declare [ sh:prefix "hno" ; sh:namespace "https://w3id.org/ontohajj/hno#"^^xsd:anyURI ] ,
+               [ sh:prefix "time" ; sh:namespace "http://www.w3.org/2006/time#"^^xsd:anyURI ] ,
+               [ sh:prefix "rdfs" ; sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ] .
+
+# C1 Entity existence: every mentioned entity is a typed named entity in the KG (closed-world)
+hno:C1_MentionExistsShape a sh:NodeShape ;
+    sh:targetSubjectsOf hno:mentions ;
+    sh:property [ sh:path hno:mentions ; sh:class hno:NamedEntity ;
+                  sh:message "C1: mentioned entity does not exist in the knowledge graph" ] .
+
+# C2 Route connectivity: consecutive steps are connected, first step leaves the origin, last reaches the destination
+hno:C2_RouteConnectedShape a sh:NodeShape ;
+    sh:targetClass hno:RouteRecommendation ;
+    sh:sparql [ sh:message "C2: consecutive route segments are not connected" ; sh:prefixes hno:Prefixes ;
+        sh:select """
+        SELECT $this WHERE {
+          $this hno:hasStep ?a , ?b .
+          ?a hno:stepIndex ?i ; hno:segment ?sa . ?b hno:stepIndex ?j ; hno:segment ?sb .
+          FILTER (?j = ?i + 1)
+          ?sa hno:toLocation ?x . ?sb hno:fromLocation ?y . FILTER (?x != ?y) }""" ] ,
+      [ sh:message "C2: route does not start at its origin" ; sh:prefixes hno:Prefixes ;
+        sh:select """
+        SELECT $this WHERE { $this hno:origin ?o ; hno:hasStep ?a . ?a hno:stepIndex 1 ; hno:segment ?s .
+          ?s hno:fromLocation ?f . FILTER (?f != ?o) }""" ] ,
+      [ sh:message "C2: route does not end at its destination" ; sh:prefixes hno:Prefixes ;
+        sh:select """
+        SELECT $this WHERE { $this hno:destination ?d ; hno:hasStep ?a . ?a hno:stepIndex ?i ; hno:segment ?s .
+          FILTER NOT EXISTS { $this hno:hasStep ?b . ?b hno:stepIndex ?k . FILTER (?k > ?i) }
+          ?s hno:toLocation ?t . FILTER (?t != ?d) }""" ] ;
+    sh:property [ sh:path hno:hasStep ; sh:minCount 1 ; sh:message "C2: route has no steps" ] .
+
+hno:C2_StepSegmentShape a sh:NodeShape ;
+    sh:targetClass hno:RouteStep ;
+    sh:property [ sh:path hno:segment ; sh:minCount 1 ; sh:maxCount 1 ; sh:class hno:PathSegment ;
+                  sh:message "C2: route step does not use an existing path segment" ] .
+
+# C3 Closures and operating windows: no step enters a segment while it is restricted
+hno:C3_RouteNotRestrictedShape a sh:NodeShape ;
+    sh:targetClass hno:RouteRecommendation ;
+    sh:sparql [ sh:message "C3: route uses a segment that is restricted at the planned time" ; sh:prefixes hno:Prefixes ;
+        sh:select """
+        SELECT $this WHERE {
+          $this hno:hasStep ?st . ?st hno:segment ?s ; hno:plannedAt ?t .
+          ?s hno:restrictedDuring ?w .
+          ?w time:hasBeginning/time:inXSDDateTime ?b ; time:hasEnd/time:inXSDDateTime ?e .
+          FILTER (?t >= ?b && ?t <= ?e) }""" ] .
+
+# C4 Ritual timing: claimed ritual times fall inside the ritual time window
+hno:C4_RitualTimeShape a sh:NodeShape ;
+    sh:targetClass hno:RitualTimeClaim ;
+    sh:property [ sh:path hno:aboutRitual ; sh:minCount 1 ; sh:class hno:Ritual ] ;
+    sh:sparql [ sh:message "C4: claimed window start differs from the ritual window" ; sh:prefixes hno:Prefixes ;
+        sh:select """
+        SELECT $this WHERE { $this hno:aboutRitual ?r ; hno:claimedStart ?c . ?r hno:hasTimeWindow ?w .
+          ?w time:hasBeginning/time:inXSDDateTime ?b . FILTER (?c != ?b) }""" ] ,
+      [ sh:message "C4: claimed window end differs from the ritual window" ; sh:prefixes hno:Prefixes ;
+        sh:select """
+        SELECT $this WHERE { $this hno:aboutRitual ?r ; hno:claimedEnd ?c . ?r hno:hasTimeWindow ?w .
+          ?w time:hasEnd/time:inXSDDateTime ?e . FILTER (?c != ?e) }""" ] .
+
+# C5 Accessibility: every segment of a route is accessible for the route's pilgrim profile
+hno:C5_AccessibleRouteShape a sh:NodeShape ;
+    sh:targetClass hno:RouteRecommendation ;
+    sh:sparql [ sh:message "C5: route contains a segment that is not accessible for the pilgrim profile" ; sh:prefixes hno:Prefixes ;
+        sh:select """
+        SELECT $this WHERE { $this hno:forProfile ?p ; hno:hasStep ?st . ?st hno:segment ?s .
+          FILTER NOT EXISTS { ?s hno:accessibleFor ?p } }""" ] .
+
+# C6 Dispatch schedule: claimed slot start and Jamarat level match the group's Tafweej slot
+hno:C6_ScheduleClaimShape a sh:NodeShape ;
+    sh:targetClass hno:ScheduleClaim ;
+    sh:property [ sh:path hno:forGroup ; sh:minCount 1 ; sh:class hno:PilgrimGroup ] ;
+    sh:sparql [ sh:message "C6: claimed dispatch time differs from the group's slot" ; sh:prefixes hno:Prefixes ;
+        sh:select """
+        SELECT $this WHERE { $this hno:forGroup ?g ; hno:aboutRitual ?r ; hno:claimedStart ?c .
+          ?g hno:hasSlot ?sl . ?sl hno:slotRitual ?r ; hno:hasTimeWindow ?w .
+          ?w time:hasBeginning/time:inXSDDateTime ?b . FILTER (?c != ?b) }""" ] ,
+      [ sh:message "C6: claimed Jamarat level differs from the group's slot" ; sh:prefixes hno:Prefixes ;
+        sh:select """
+        SELECT $this WHERE { $this hno:forGroup ?g ; hno:aboutRitual ?r ; hno:claimedFacility ?f .
+          ?g hno:hasSlot ?sl . ?sl hno:slotRitual ?r ; hno:slotFacility ?lf . FILTER (?f != ?lf) }""" ] .
+
+# C7 Provenance: every claim is linked to a source
+hno:C7_ProvenanceShape a sh:NodeShape ;
+    sh:targetClass hno:Claim ;
+    sh:property [ sh:path hno:derivedFrom ; sh:minCount 1 ; sh:class hno:Source ;
+                  sh:message "C7: claim is not linked to a source" ] .
+
+# C8 Spatial relation: a facility is located in the claimed site (transitively)
+hno:C8_LocationClaimShape a sh:NodeShape ;
+    sh:targetClass hno:LocationClaim ;
+    sh:sparql [ sh:message "C8: facility is not located in the claimed site" ; sh:prefixes hno:Prefixes ;
+        sh:select """
+        SELECT $this WHERE { $this hno:aboutFacility ?f ; hno:claimedSite ?s .
+          FILTER NOT EXISTS { ?f hno:locatedIn+ ?s } }""" ] .

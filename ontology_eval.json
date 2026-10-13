@@ -1,0 +1,77 @@
+{
+ "classes": 33,
+ "object_properties": 30,
+ "data_properties": 11,
+ "logical_axioms_tbox": 111,
+ "individuals": 119,
+ "kg_resources": 21610,
+ "triples_tbox": 317,
+ "triples_abox": 67266,
+ "triples_shapes": 95,
+ "path_segments": 180,
+ "restriction_windows": 83,
+ "crowd_observations": 5184,
+ "dispatch_slots": 72,
+ "groups": 24,
+ "labels_ar": 121,
+ "labels_en": 121,
+ "alt_labels": 413,
+ "shapes": 9,
+ "expressivity": "SOQ(D)",
+ "hermit_seconds": 162.8,
+ "hermit_consistent": true,
+ "inferred_stepfree_segments": 164,
+ "competency_questions": {
+  "CQ1 Which path segments connect a given camp (M07) to the Jamarat plaza?": {
+   "answers": 1,
+   "ms": 127.4,
+   "answered": true
+  },
+  "CQ2 Which segments are restricted at a given time (10 DH 08:00)?": {
+   "answers": 13,
+   "ms": 28.9,
+   "answered": true
+  },
+  "CQ3 Which facilities are accessible to a wheelchair user (via step-free segments)?": {
+   "answers": 62,
+   "ms": 177.4,
+   "answered": true
+  },
+  "CQ4 Which ritual must precede the stoning on 11 Dhu al-Hijjah, and in which window?": {
+   "answers": 1,
+   "ms": 5.2,
+   "answered": true
+  },
+  "CQ5 In which holy site is a given facility (Masjid Namirah) located?": {
+   "answers": 1,
+   "ms": 3.6,
+   "answered": true
+  },
+  "CQ6 When and at which Jamarat level is the dispatch slot of group G05 on 10 Dhu al-Hijjah?": {
+   "answers": 1,
+   "ms": 6.0,
+   "answered": true
+  },
+  "CQ7 When does the metro operate from Arafat Station 3 towards Muzdalifah?": {
+   "answers": 2,
+   "ms": 5.3,
+   "answered": true
+  },
+  "CQ8 What is the crowd level on the Jamarat approach at a given time (10 DH 07:00)?": {
+   "answers": 7,
+   "ms": 60.9,
+   "answered": true
+  },
+  "CQ9 Which source asserts a given fact (provenance of segment Seg_001)?": {
+   "answers": 1,
+   "ms": 3.2,
+   "answered": true
+  },
+  "CQ10 Which camps are assigned to a group (G05)?": {
+   "answers": 2,
+   "ms": 2.7,
+   "answered": true
+  }
+ },
+ "cq_answered": "10/10"
+}

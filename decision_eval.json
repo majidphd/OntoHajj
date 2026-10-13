@@ -1,0 +1,60 @@
+{
+ "n_route_questions": 109,
+ "baseline_fastest_violation_rate_pct": 26.6,
+ "baseline_violation_types": {
+  "C3": 6,
+  "C5": 25
+ },
+ "ontohajj_violation_rate_pct": 0.0,
+ "ontohajj_answered": 100,
+ "ontohajj_abstained": 9,
+ "abstentions_matching_gold": 9,
+ "earliest_departure_found_in_abstentions": 4,
+ "mean_feasible_routes": 10.33,
+ "rstar_differs_from_fastest_pct": 34.0,
+ "criteria_rstar_vs_fastest_feasible": {
+  "u1_travel_time": {
+   "rstar_mean": 41.28,
+   "fastest_feasible_mean": 39.34,
+   "relative_change_pct": 4.9
+  },
+  "u2_crowd_exposure": {
+   "rstar_mean": 2.47,
+   "fastest_feasible_mean": 2.41,
+   "relative_change_pct": 2.5
+  },
+  "u3_walking_distance": {
+   "rstar_mean": 1552.15,
+   "fastest_feasible_mean": 1513.25,
+   "relative_change_pct": 2.6
+  },
+  "u4_accessibility_safety": {
+   "rstar_mean": 0.84,
+   "fastest_feasible_mean": 0.77,
+   "relative_change_pct": 8.4
+  },
+  "u5_schedule_margin": {
+   "rstar_mean": 15.74,
+   "fastest_feasible_mean": 15.84,
+   "relative_change_pct": -0.6
+  }
+ },
+ "rank_stability_dirichlet_mean": 0.9363,
+ "rank_stability_oat20_mean": 0.9789,
+ "decide_latency_ms": {
+  "mean": 7.6,
+  "p95": 13.1
+ },
+ "ahp": {
+  "weights": {
+   "u1_travel_time": 0.1194,
+   "u2_crowd_exposure": 0.3868,
+   "u3_walking_distance": 0.0693,
+   "u4_accessibility_safety": 0.2122,
+   "u5_schedule_margin": 0.2122
+  },
+  "lambda_max": 5.0173,
+  "CI": 0.0043,
+  "CR": 0.0039
+ }
+}

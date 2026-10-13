@@ -1,0 +1,179 @@
+{
+ "C0": {
+  "acc_cat": {
+   "Q1": 7.5,
+   "Q2": 0.0,
+   "Q3": 0.0,
+   "Q4": 0.0,
+   "Q5": 0.0,
+   "Q6": 19.0
+  },
+  "cvr_cat": {
+   "Q1": 43.8,
+   "Q2": 52.7,
+   "Q3": 15.9,
+   "Q4": 54.3,
+   "Q5": 40.0,
+   "Q6": 19.1
+  },
+  "lat_median": 25.9,
+  "tokens_mean": 747
+ },
+ "C1": {
+  "acc_cat": {
+   "Q1": 89.6,
+   "Q2": 0.0,
+   "Q3": 81.9,
+   "Q4": 0.0,
+   "Q5": 4.3,
+   "Q6": 22.6
+  },
+  "cvr_cat": {
+   "Q1": 7.5,
+   "Q2": 49.1,
+   "Q3": 12.5,
+   "Q4": 45.7,
+   "Q5": 10.0,
+   "Q6": 23.1
+  },
+  "lat_median": 72.5,
+  "tokens_mean": 1552
+ },
+ "C2": {
+  "acc_cat": {
+   "Q1": 100.0,
+   "Q2": 28.6,
+   "Q3": 76.4,
+   "Q4": 28.6,
+   "Q5": 35.7,
+   "Q6": 36.9
+  },
+  "cvr_cat": {
+   "Q1": 0.0,
+   "Q2": 70.5,
+   "Q3": 19.4,
+   "Q4": 65.7,
+   "Q5": 14.3,
+   "Q6": 11.3
+  },
+  "lat_median": 55.6,
+  "tokens_mean": 1901
+ },
+ "C3": {
+  "acc_cat": {
+   "Q1": 100.0,
+   "Q2": 92.9,
+   "Q3": 69.4,
+   "Q4": 85.7,
+   "Q5": 94.3,
+   "Q6": 33.3
+  },
+  "cvr_cat": {
+   "Q1": 0.0,
+   "Q2": 1.8,
+   "Q3": 26.4,
+   "Q4": 0.0,
+   "Q5": 2.9,
+   "Q6": 19.6
+  },
+  "lat_median": 56.1,
+  "tokens_mean": 1495
+ },
+ "C4": {
+  "acc_cat": {
+   "Q1": 100.0,
+   "Q2": 100.0,
+   "Q3": 76.4,
+   "Q4": 100.0,
+   "Q5": 98.6,
+   "Q6": 94.0
+  },
+  "cvr_cat": {
+   "Q1": 0.0,
+   "Q2": 0.0,
+   "Q3": 0.0,
+   "Q4": 0.0,
+   "Q5": 0.0,
+   "Q6": 0.0
+  },
+  "lat_median": 54.4,
+  "tokens_mean": 1470
+ },
+ "C4_errors": {
+  "l6_abstain_after_detected_C4": 15,
+  "l2_link_fail": 3,
+  "answered_should_abstain_juristic": 3,
+  "answered_should_abstain_out-of-scope": 2
+ },
+ "C4_repairs": {
+  "0": 488,
+  "2": 19,
+  "1": 7
+ },
+ "C4_repaired_delivered": 5,
+ "C4_repaired_abstained": 21,
+ "C4_abstain_reasons": {
+  "L4: empty feasible set": 18,
+  "None": 26,
+  "L2: out of scope or unresolved entity": 71
+ },
+ "ablation": {
+  "C4": {
+   "Acc": 94.0,
+   "Cov": 81.0,
+   "AbsF1": 0.833,
+   "HR": 0.0,
+   "CVR": 0.0,
+   "repairs": 10,
+   "lat": 72.7
+  },
+  "C3": {
+   "Acc": 80.0,
+   "Cov": 97.0,
+   "AbsF1": 0.3,
+   "HR": 3.1,
+   "CVR": 8.2,
+   "repairs": 0,
+   "lat": 105.7
+  },
+  "C2": {
+   "Acc": 53.0,
+   "Cov": 96.0,
+   "AbsF1": 0.381,
+   "HR": 11.4,
+   "CVR": 28.1,
+   "repairs": 0,
+   "lat": 88.0
+  },
+  "C4k0": {
+   "Acc": 92.0,
+   "Cov": 79.0,
+   "AbsF1": 0.789,
+   "HR": 0.0,
+   "CVR": 0.0,
+   "repairs": 0,
+   "lat": 70.0
+  },
+  "C4hint": {
+   "Acc": 93.0,
+   "Cov": 80.0,
+   "AbsF1": 0.811,
+   "HR": 0.0,
+   "CVR": 0.0,
+   "repairs": 11,
+   "lat": 58.1
+  }
+ },
+ "ablation_p": {
+  "C3": 0.0001220703125,
+  "C2": 1.000444171950221e-11,
+  "C4k0": 0.625,
+  "C4hint": 1.0
+ },
+ "posthoc_partial": {
+  "incorrect_L6_abstentions": 15,
+  "would_be_correct": 14,
+  "acc_if_partial": 98.2
+ },
+ "C0_abstain_n": 20
+}

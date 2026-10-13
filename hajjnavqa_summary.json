@@ -1,0 +1,24 @@
+{
+ "total": 736,
+ "pairs": 368,
+ "by_category": {
+  "Q1": 76,
+  "Q2": 80,
+  "Q3": 52,
+  "Q4": 50,
+  "Q5": 50,
+  "Q6": 60
+ },
+ "expect_abstain": 77,
+ "answerable_expect_abstain": 17,
+ "dev_pairs": 111,
+ "test_pairs": 257,
+ "test_by_category": {
+  "Q1": 53,
+  "Q2": 56,
+  "Q3": 36,
+  "Q4": 35,
+  "Q5": 35,
+  "Q6": 42
+ }
+}

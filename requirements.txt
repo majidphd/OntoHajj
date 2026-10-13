@@ -1,0 +1,7 @@
+rdflib>=7.0
+pyshacl>=0.26
+networkx>=3.2
+rapidfuzz>=3.6
+numpy>=1.26
+owlready2>=0.46   # HermiT consistency check (requires Java)
+matplotlib>=3.8   # figures only

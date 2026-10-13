@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it as below."
+title: "OntoHajj: Ontology-Guided Neuro-Symbolic Decision Support Framework, Hajj Navigation Ontology and HajjNavQA Benchmark"
+version: 1.0.0
+date-released: 2026-10-14
+license: MIT
+authors:
+  - family-names: Alzahrani
+    given-names: Majid
+    affiliation: "King Abdulaziz University"
+  - family-names: Sherbini
+    given-names: Mustafa
+    affiliation: "King Abdulaziz University"
+  - family-names: Bedewi
+    given-names: Wafi
+    affiliation: "King Abdulaziz University"
+keywords:
+  - ontology
+  - large language models
+  - hallucination
+  - neuro-symbolic
+  - Hajj
+  - SHACL

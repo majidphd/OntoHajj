@@ -1,0 +1,43 @@
+{
+ "en_dev": {
+  "intent_accuracy": 1.0,
+  "intent_n": 96,
+  "linking_precision_strict": 0.8049,
+  "linking_recall": 1.0,
+  "linking_f1": 0.8919,
+  "nonexistent_detection_recall": 1.0,
+  "nonexistent_n": 9,
+  "false_alarm_rate_answerable": 0.0
+ },
+ "ar_dev": {
+  "intent_accuracy": 1.0,
+  "intent_n": 96,
+  "linking_precision_strict": 0.8779,
+  "linking_recall": 0.8779,
+  "linking_f1": 0.8779,
+  "nonexistent_detection_recall": 1.0,
+  "nonexistent_n": 9,
+  "false_alarm_rate_answerable": 0.0
+ },
+ "en_test": {
+  "intent_accuracy": 0.9824,
+  "intent_n": 227,
+  "linking_precision_strict": 0.8102,
+  "linking_recall": 1.0,
+  "linking_f1": 0.8952,
+  "nonexistent_detection_recall": 1.0,
+  "nonexistent_n": 21,
+  "false_alarm_rate_answerable": 0.0
+ },
+ "ar_test": {
+  "intent_accuracy": 0.9868,
+  "intent_n": 227,
+  "linking_precision_strict": 0.8654,
+  "linking_recall": 0.855,
+  "linking_f1": 0.8602,
+  "nonexistent_detection_recall": 1.0,
+  "nonexistent_n": 21,
+  "false_alarm_rate_answerable": 0.0
+ },
+ "mean_ms_per_query": 0.97
+}
