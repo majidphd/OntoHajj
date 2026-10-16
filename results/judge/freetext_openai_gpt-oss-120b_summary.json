@@ -1,0 +1,23 @@
+{
+ "qwen2.5_7b/C2": {
+  "n": 60,
+  "consistent": 25,
+  "contradiction": 9,
+  "unsupported": 35,
+  "parse_error": 0
+ },
+ "qwen2.5_7b/C3": {
+  "n": 60,
+  "consistent": 24,
+  "contradiction": 0,
+  "unsupported": 36,
+  "parse_error": 0
+ },
+ "qwen2.5_7b/C4": {
+  "n": 55,
+  "consistent": 20,
+  "contradiction": 2,
+  "unsupported": 35,
+  "parse_error": 0
+ }
+}

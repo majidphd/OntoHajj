@@ -73,9 +73,11 @@ annotators; agreement is reported as Cohen's kappa.
 |---|---|
 | `eval/reviewer_analyses.py` | results without the 20 pilot questions and their translations; L2 refusal recall; Q3 S2-vs-S3 test; crowd-exposure trade-off of r* |
 | `eval/freetext_consistency.py` | lexical check of the free-text answer against its typed claims, for every answered question |
-| `eval/llm_judge_freetext.py` | Experiment B1: an independent LLM judges whether the free text contradicts or goes beyond the claims (sample of S2–S4 answers) |
+| `eval/llm_judge_freetext.py --v2` | Experiment B1: an independent LLM judges whether the free text contradicts or goes beyond the claims, given the knowledge-graph content of each claim (sample of S2–S4 answers). The first run without `--v2` (claim identifiers only) is kept for transparency but is not used |
 | `eval/llm_judge_e3.py` | Experiment B2: LLM-as-judge baseline (claim vs. reference passages) for the hallucination-injection study |
-| `notebooks/gpu_timing_colab.ipynb` | Experiment B3: S4 and S2 on a free Colab GPU, same 100 questions, for latency |
+| `eval/template_baseline.py` | S4-Template: the full pipeline with the LLM replaced by a deterministic renderer of the claim skeletons (no LLM) |
+| `eval/decision_normalization.py` | E4 with fixed-scale normalization and with crowd exposure as a near-hard constraint |
+| `notebooks/gpu_timing_colab.ipynb`, `eval/gpu_summary.py` | Experiment B3: S4 and S2 on a free Colab T4 GPU, same 100 questions; results in `results/llm/qwen2.5_7b/test_gpu` and `results/gpu_timing.json` |
 
 The two judge scripts use the same environment variables as `run_llm_eval.py` (e.g. GroqCloud) and can be stopped
 and restarted; results go to `results/judge/`.

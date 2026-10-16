@@ -1,0 +1,64 @@
+{
+ "n_answered": 100,
+ "bounds": {
+  "u1_travel_time": [
+   10.9,
+   152.2
+  ],
+  "u2_crowd_exposure": [
+   0.5,
+   14.78
+  ],
+  "u3_walking_distance": [
+   500.0,
+   7360.0
+  ],
+  "u4_accessibility_safety": [
+   0.0,
+   1.0
+  ],
+  "u5_schedule_margin": [
+   0.0,
+   96.0
+  ]
+ },
+ "minmax": {
+  "differs_pct": 34.0,
+  "more_crowded": 22,
+  "less_crowded": 10,
+  "equal": 2,
+  "relative_change_vs_fastest_pct": {
+   "u1_travel_time": 4.9,
+   "u2_crowd_exposure": 2.5,
+   "u3_walking_distance": 2.6,
+   "u4_accessibility_safety": 8.4,
+   "u5_schedule_margin": -0.6
+  }
+ },
+ "fixed": {
+  "differs_pct": 33.0,
+  "more_crowded": 21,
+  "less_crowded": 12,
+  "equal": 0,
+  "relative_change_vs_fastest_pct": {
+   "u1_travel_time": 5.1,
+   "u2_crowd_exposure": 3.0,
+   "u3_walking_distance": 3.2,
+   "u4_accessibility_safety": 10.0,
+   "u5_schedule_margin": -0.6
+  }
+ },
+ "crowd_cap": {
+  "differs_pct": 19.0,
+  "more_crowded": 6,
+  "less_crowded": 13,
+  "equal": 0,
+  "relative_change_vs_fastest_pct": {
+   "u1_travel_time": 1.8,
+   "u2_crowd_exposure": -2.1,
+   "u3_walking_distance": -0.1,
+   "u4_accessibility_safety": 3.5,
+   "u5_schedule_margin": -0.4
+  }
+ }
+}

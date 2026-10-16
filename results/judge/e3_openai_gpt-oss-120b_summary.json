@@ -1,0 +1,27 @@
+{
+ "gold": {
+  "flagged": 2,
+  "n": 40,
+  "rate": 0.05
+ },
+ "entity": {
+  "flagged": 31,
+  "n": 40,
+  "rate": 0.775
+ },
+ "relational": {
+  "flagged": 17,
+  "n": 40,
+  "rate": 0.425
+ },
+ "temporal": {
+  "flagged": 40,
+  "n": 40,
+  "rate": 1.0
+ },
+ "constraint": {
+  "flagged": 36,
+  "n": 40,
+  "rate": 0.9
+ }
+}

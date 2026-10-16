@@ -1,0 +1,26 @@
+{
+ "C4": {
+  "n": 100,
+  "correct_gpu": 94,
+  "correct_cpu": 94,
+  "agree": 96,
+  "unsafe_gpu": 0,
+  "lat_mean": 10.56,
+  "lat_median": 7.59,
+  "lat_p95": 25.29,
+  "lat_llm_mean": 12.42,
+  "cpu_lat_mean": 72.7
+ },
+ "C2": {
+  "n": 100,
+  "correct_gpu": 53,
+  "correct_cpu": 53,
+  "agree": 94,
+  "unsafe_gpu": 26,
+  "lat_mean": 9.43,
+  "lat_median": 8.51,
+  "lat_p95": 18.55,
+  "lat_llm_mean": 9.43,
+  "cpu_lat_mean": 88.0
+ }
+}

@@ -11,6 +11,7 @@ results/judge/freetext_<judge>.jsonl, so the script can be stopped and restarted
 Usage (GroqCloud, same environment variables as run_llm_eval.py):
   python eval/llm_judge_freetext.py --judge openai/gpt-oss-120b
   python eval/llm_judge_freetext.py --judge openai/gpt-oss-120b --summary      # print the table only
+  python eval/llm_judge_freetext.py --judge openai/gpt-oss-120b --v2           # v2: claims spelled out with their KG content
 """
 import argparse, json, os, random, sys
 from collections import defaultdict
@@ -31,9 +32,58 @@ advice to contact the service provider are NOT problems. An arrival time equal t
 stated travel time is supported."""
 
 
-def user_msg(it, rec):
-    return (f"QUESTION: {it['question']}\nCONTEXT: {json.dumps(it['context'], ensure_ascii=False)}\n"
-            f"CLAIMS: {json.dumps(rec.get('claims') or [], ensure_ascii=False)}\nANSWER: {rec.get('answer') or ''}")
+KG = None
+
+
+def claim_facts(claims):
+    """v2: spell out what each verified claim entails in the knowledge graph (names in both languages, route legs
+    with mode, length, minutes and step-free access, distance to the nearest facility, end of a dispatch slot),
+    so that the judge does not count attributes of a claimed entity as unsupported content."""
+    global KG
+    from datetime import datetime, timedelta
+    from ontohajj.kg import load, HNO
+    from ontohajj.retrieve import nearest
+    KG = KG or load()
+    nm = lambda x: f"{KG.label(HNO[x], 'en')} / {KG.label(HNO[x], 'ar')}" if isinstance(x, str) and KG.exists(HNO[x]) else str(x)
+    out = []
+    for c in claims or []:
+        t = c.get("type")
+        if t == "location":
+            out.append(f"{nm(c.get('facility'))} is located in {nm(c.get('site'))}.")
+        elif t == "nearest":
+            try:
+                f, d = nearest(KG, HNO[c["from"]], HNO[c["facility_type"]])
+                out.append(f"The nearest {c['facility_type']} to {nm(c['from'])} is {nm(c.get('facility'))}; walking distance {int(d)} m.")
+            except Exception:
+                out.append(json.dumps(c, ensure_ascii=False))
+        elif t == "schedule":
+            sl = KG.slots.get((HNO[c.get("group", "")], HNO[c.get("ritual", "")])) if c.get("group") and c.get("ritual") else None
+            end = sl["win"][1].isoformat(timespec="minutes") if sl else "?"
+            out.append(f"Dispatch slot of {nm(c.get('group'))} for {nm(c.get('ritual'))}: {nm(c.get('facility'))}, from {c.get('start')} to {end} (Makkah time; 10 Dhu al-Hijjah = 27 May 2026).")
+        elif t == "ritual_time":
+            out.append(f"{nm(c.get('ritual'))} window: from {c.get('start')} to {c.get('end')}.")
+        elif t == "route":
+            segs = [HNO[s] for s in c.get("segments") or [] if isinstance(s, str) and HNO[s] in KG.seg]
+            legs, tot = [], 0
+            for s in segs:
+                d = KG.seg[s]; tot += d["min"]
+                legs.append(f"{nm(str(d['from']).split('#')[-1])} -> {nm(str(d['to']).split('#')[-1])} by {KG.label(d['mode'], 'en')}, "
+                            f"{int(d['len'])} m, {d['min']} min, {'step-free' if HNO.Profile_Wheelchair in d['access'] else 'has stairs'}")
+            dep = c.get("depart")
+            arr = (datetime.fromisoformat(dep) + timedelta(minutes=tot)).isoformat(timespec="minutes") if dep and segs else "?"
+            out.append(f"Verified route from {nm(c.get('origin'))} to {nm(c.get('destination'))}, departing {dep}, arriving about {arr} "
+                       f"({round(tot)} min). Legs in order: " + "; ".join(legs))
+        else:
+            out.append(json.dumps(c, ensure_ascii=False))
+    return "\n".join(f"- {x}" for x in out) or "- (none)"
+
+
+def user_msg(it, rec, v2=False):
+    m = (f"QUESTION: {it['question']}\nCONTEXT: {json.dumps(it['context'], ensure_ascii=False)}\n"
+         f"CLAIMS: {json.dumps(rec.get('claims') or [], ensure_ascii=False)}\n")
+    if v2:
+        m += "WHAT THE CLAIMS STATE (from the verified knowledge graph; content stated here counts as supported):\n" + claim_facts(rec.get("claims")) + "\n"
+    return m + f"ANSWER: {rec.get('answer') or ''}"
 
 
 def sample(model_dir, cfg, n_per_cat, seed):
@@ -53,10 +103,11 @@ def main():
     ap.add_argument("--configs", nargs="+", default=["C4", "C3", "C2"])
     ap.add_argument("--per_cat", type=int, default=10); ap.add_argument("--seed", type=int, default=2026)
     ap.add_argument("--summary", action="store_true")
+    ap.add_argument("--v2", action="store_true", help="give the judge the knowledge-graph content of every claim (recommended)")
     a = ap.parse_args()
     items = {json.loads(l)["id"]: json.loads(l) for l in open(os.path.join(ROOT, "data", "hajjnavqa.jsonl"), encoding="utf-8")}
     os.makedirs(os.path.join(ROOT, "results", "judge"), exist_ok=True)
-    out = os.path.join(ROOT, "results", "judge", f"freetext_{a.judge.replace('/', '_').replace(':', '_')}.jsonl")
+    out = os.path.join(ROOT, "results", "judge", f"freetext{'_v2' if a.v2 else ''}_{a.judge.replace('/', '_').replace(':', '_')}.jsonl")
     done = {(json.loads(l)["model"], json.loads(l)["config"], json.loads(l)["id"]) for l in open(out, encoding="utf-8")} if os.path.exists(out) else set()
     if not a.summary:
         llm = LLM(model=a.judge)
@@ -67,7 +118,7 @@ def main():
                     if key in done:
                         continue
                     try:
-                        text, tok, lat = llm(SYSTEM, user_msg(items[rec["id"]], rec))
+                        text, tok, lat = llm(SYSTEM, user_msg(items[rec["id"]], rec, a.v2))
                     except QuotaExhausted as e:
                         print(f"\nSTOPPED: {e}\nRun the same command again later; it continues where it stopped.", flush=True); sys.exit(2)
                     except Exception as e:
