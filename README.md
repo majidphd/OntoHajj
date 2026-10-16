@@ -70,6 +70,11 @@ English) from scenario cards (`bench/human_scenarios.json`, built by `bench/buil
 computed from the knowledge graph as for HajjNavQA. Run with `--data hajjnavqa_h.jsonl --split human`
 (`notebooks/human_eval_colab.ipynb`); `eval/human_l2_analysis.py` reports L2 on these questions.
 
+## LLM-based query understanding (S4-LLM-L2)
+`--configs C4llm` replaces the lexical intent rules of L2 by an LLM that types the question into the ontology's
+intent types and rewrites entity mentions in the canonical HNO naming scheme; the mentions are linked by the
+ontology linker, so only HNO entities enter the pipeline (`ontohajj/understand_llm.py`, `notebooks/llm_l2_colab.ipynb`).
+
 ## Manual check of the benchmark
 `bench/annotation_sample_ids.txt` lists the 100 test questions (random, seed 2026) checked by two
 annotators; agreement is reported as Cohen's kappa.

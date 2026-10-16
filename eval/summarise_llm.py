@@ -68,7 +68,7 @@ def main(folder):
     json.dump(out, open(os.path.join(d, "summary.json"), "w", encoding="utf-8"), indent=1)
     print(json.dumps(out, indent=1))
     print("\nSummary table (Acc / HR / OHR / CVR / Cov / SelAcc / AbsF1 / latency s):")
-    NAME = {"C0": "S0", "C1": "S1", "C2": "S2", "C3": "S3", "C4": "S4", "C4k0": "S4-NoRepair", "C4hint": "S4-Hint"}
+    NAME = {"C0": "S0", "C1": "S1", "C2": "S2", "C3": "S3", "C4": "S4", "C4k0": "S4-NoRepair", "C4hint": "S4-Hint", "C4llm": "S4-LLM-L2"}
     for cfg, v in out.items():
         print(f"{NAME.get(cfg, cfg):12s} {v['Acc']:.3f} {v['HR']:.3f} {v['OHR']:.3f} {v['CVR']:.3f} {v['Cov']:.3f} {v['SelAcc']:.3f} {v['AbsF1']:.3f} {v['Latency_s'] or 0:.1f}")
 

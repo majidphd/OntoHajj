@@ -62,7 +62,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", required=True); ap.add_argument("--provider", default=None)
     ap.add_argument("--configs", nargs="+", default=["C0", "C1", "C2", "C3", "C4"],
-                    help="settings S0-S4 (or C0-C4); ablations S4-NoRepair (C4k0) and S4-Hint (C4hint)")
+                    help="settings S0-S4 (or C0-C4); ablations S4-NoRepair (C4k0), S4-Hint (C4hint); S4-LLM-L2 (C4llm)")
     ap.add_argument("--runs", type=int, default=1); ap.add_argument("--split", default="test")
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--data", default="hajjnavqa.jsonl", help="benchmark file in data/ (hajjnavqa_h.jsonl = human-written questions, split 'human')")
@@ -99,7 +99,7 @@ def main():
                                         "expect_abstain": it["expect_abstain"], **s, "latency": rec.get("latency", {}).get("total"),
                                         "tokens": rec.get("tokens", 0), "repairs": rec.get("repairs", 0),
                                         "answer": rec.get("answer"), "claims": rec.get("claims"),
-                                        "attempts": rec.get("attempts"), "reason": rec.get("reason")}, ensure_ascii=False) + "\n")
+                                        "attempts": rec.get("attempts"), "reason": rec.get("reason"), "l2_llm": rec.get("l2_llm"), "intent": rec.get("intent")}, ensure_ascii=False) + "\n")
                     f.flush()
                     print(f"{cfg} run{run} {it['id']} correct={s['correct']} abstain={s['abstain']}", flush=True)
             print("finished", cfg, "run", run, "->", path, flush=True)

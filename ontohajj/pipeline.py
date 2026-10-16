@@ -47,7 +47,7 @@ class OntoHajj:
     # ------------------------------------------------------------------
     def answer(self, question, context, config="C4", lang="en"):
         """config: C0-C4; ablations: C4k0 (no repair), C4hint (verbose hints instead of verdicts)"""
-        ALIAS = {"S0": "C0", "S1": "C1", "S2": "C2", "S3": "C3", "S4": "C4", "S4-NoRepair": "C4k0", "S4-Hint": "C4hint"}
+        ALIAS = {"S0": "C0", "S1": "C1", "S2": "C2", "S3": "C3", "S4": "C4", "S4-NoRepair": "C4k0", "S4-Hint": "C4hint", "S4-LLM-L2": "C4llm"}
         config = ALIAS.get(config, config)
         variant = config
         k_repair = 0 if config == "C4k0" else self.k
@@ -62,10 +62,21 @@ class OntoHajj:
         facts, passages, route_txt, best_info, route_claim = None, None, None, None, None
         # ---------------- L2
         ents, unresolved = self.linker.link(question)
+        it = intent(question)
+        if variant == "C4llm":                      # S4-LLM-L2: LLM intent typing + canonical mentions, linked to HNO
+            from .understand_llm import understand
+            z, mentions, tok = understand(self.llm, question)
+            rec["tokens"] += tok
+            unresolved = []
+            for m in mentions:
+                f, u = self.linker.link(m)
+                ents += [e for e in f if e not in ents]; unresolved += u
+            if z is not None:
+                it = z
+            rec["l2_llm"] = {"intent": z, "mentions": mentions}
         for key in ("location", "group"):
             if context.get(key) and HNO[context[key]] not in ents:
                 ents.append(HNO[context[key]])
-        it = intent(question)
         rec.update(intent=it, entities=[local(e) for e in ents], unresolved=unresolved)
         rec["latency"]["L2"] = T() - t0
         if config == "C4" and (it == "OutOfScope" or unresolved or not ents):
