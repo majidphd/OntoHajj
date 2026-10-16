@@ -1,0 +1,1224 @@
+[
+ {
+  "id": "H01",
+  "category": "Q1",
+  "scenario_ar": "أنت في مخيم منى م09، وتريد أن تعرف أقرب مركز صحي إليك.",
+  "scenario_en": "You are in Mina camp M09 and want to know the nearest medical centre.",
+  "context": {
+   "time": null,
+   "location": "Camp_M09"
+  },
+  "gold": [
+   {
+    "type": "nearest",
+    "from": "Camp_M09",
+    "facility_type": "MedicalPoint",
+    "facility": "Med_MinaB"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H02",
+  "category": "Q1",
+  "scenario_ar": "أنت في مخيم عرفات ع07، وتريد أن تعرف أقرب محطة قطار المشاعر إليك.",
+  "scenario_en": "You are in Arafat camp A07 and want to know the nearest metro station.",
+  "context": {
+   "time": null,
+   "location": "Camp_A07"
+  },
+  "gold": [
+   {
+    "type": "nearest",
+    "from": "Camp_A07",
+    "facility_type": "MetroStation",
+    "facility": "Station_Arafat3"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H03",
+  "category": "Q1",
+  "scenario_ar": "أنت في مخيم منى م17، وتريد أن تعرف أقرب مركز صحي إليك.",
+  "scenario_en": "You are in Mina camp M17 and want to know the nearest medical centre.",
+  "context": {
+   "time": null,
+   "location": "Camp_M17"
+  },
+  "gold": [
+   {
+    "type": "nearest",
+    "from": "Camp_M17",
+    "facility_type": "MedicalPoint",
+    "facility": "Med_MinaC"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H04",
+  "category": "Q1",
+  "scenario_ar": "أنت في مخيم منى م12، وتريد أن تعرف أقرب محطة قطار المشاعر إليك.",
+  "scenario_en": "You are in Mina camp M12 and want to know the nearest metro station.",
+  "context": {
+   "time": null,
+   "location": "Camp_M12"
+  },
+  "gold": [
+   {
+    "type": "nearest",
+    "from": "Camp_M12",
+    "facility_type": "MetroStation",
+    "facility": "Station_Mina2"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H05",
+  "category": "Q1",
+  "scenario_ar": "أنت في مخيم منى م19، وتريد أن تعرف أقرب مركز صحي إليك.",
+  "scenario_en": "You are in Mina camp M19 and want to know the nearest medical centre.",
+  "context": {
+   "time": null,
+   "location": "Camp_M19"
+  },
+  "gold": [
+   {
+    "type": "nearest",
+    "from": "Camp_M19",
+    "facility_type": "MedicalPoint",
+    "facility": "Med_MinaC"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H06",
+  "category": "Q1",
+  "scenario_ar": "سمعت عن «الدور الثاني للجمرات» ولا تعرف في أي مشعر يقع.",
+  "scenario_en": "You heard of 'Jamarat level 2' and do not know in which holy site it is.",
+  "context": {
+   "time": null
+  },
+  "gold": [
+   {
+    "type": "location",
+    "facility": "JamaratLevel_2",
+    "site": "Mina"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H07",
+  "category": "Q1",
+  "scenario_ar": "سمعت عن «محطة عرفات 1» ولا تعرف في أي مشعر يقع.",
+  "scenario_en": "You heard of 'Arafat Station 1' and do not know in which holy site it is.",
+  "context": {
+   "time": null
+  },
+  "gold": [
+   {
+    "type": "location",
+    "facility": "Station_Arafat1",
+    "site": "Arafat"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H08",
+  "category": "Q1",
+  "scenario_ar": "سمعت عن «مسجد الخيف» ولا تعرف في أي مشعر يقع.",
+  "scenario_en": "You heard of 'Masjid al-Khayf' and do not know in which holy site it is.",
+  "context": {
+   "time": null
+  },
+  "gold": [
+   {
+    "type": "location",
+    "facility": "MasjidAlKhayf",
+    "site": "Mina"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H09",
+  "category": "Q1",
+  "scenario_ar": "سمعت عن «باب السلام» ولا تعرف في أي مشعر يقع.",
+  "scenario_en": "You heard of 'Al-Salam Gate' and do not know in which holy site it is.",
+  "context": {
+   "time": null
+  },
+  "gold": [
+   {
+    "type": "location",
+    "facility": "Gate_AlSalam",
+    "site": "MasjidAlHaram"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H10",
+  "category": "Q1",
+  "scenario_ar": "سمعت عن «مسجد المشعر الحرام» ولا تعرف في أي مشعر يقع.",
+  "scenario_en": "You heard of 'Masjid al-Mashar al-Haram' and do not know in which holy site it is.",
+  "context": {
+   "time": null
+  },
+  "gold": [
+   {
+    "type": "location",
+    "facility": "MasjidAlMasharAlHaram",
+    "site": "Muzdalifah"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H11",
+  "category": "Q2",
+  "scenario_ar": "أنت في مخيم منى م02، وتريد الذهاب إلى الدور الثالث للجمرات يوم 12 ذو الحجة الساعة 09:30، وتسأل عن الطريق.",
+  "scenario_en": "You are in Mina camp M02 and want to go to Jamarat level 3 on 12 Dhu al-Hijjah at 09:30; you ask for the way.",
+  "context": {
+   "time": "2026-05-29T09:30",
+   "location": "Camp_M02",
+   "destination": "JamaratLevel_3",
+   "profile": "Profile_Standard"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M02",
+    "destination": "JamaratLevel_3",
+    "profile": "Profile_Standard",
+    "depart": "2026-05-29T09:30",
+    "segments": [
+     "Seg_003",
+     "Seg_063",
+     "Seg_177",
+     "Seg_179",
+     "Seg_069",
+     "Seg_077"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H12",
+  "category": "Q2",
+  "scenario_ar": "أنت في مخيم منى م07، وتريد الذهاب إلى الدور الأول للجمرات يوم العيد (10 ذو الحجة) الساعة 19:00، وتسأل عن الطريق.",
+  "scenario_en": "You are in Mina camp M07 and want to go to Jamarat level 1 on 10 Dhu al-Hijjah at 19:00; you ask for the way.",
+  "context": {
+   "time": "2026-05-27T19:00",
+   "location": "Camp_M07",
+   "destination": "JamaratLevel_1",
+   "profile": "Profile_Standard"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M07",
+    "destination": "JamaratLevel_1",
+    "profile": "Profile_Standard",
+    "depart": "2026-05-27T19:00",
+    "segments": [
+     "Seg_015",
+     "Seg_063",
+     "Seg_177",
+     "Seg_179",
+     "Seg_069",
+     "Seg_073"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H13",
+  "category": "Q2",
+  "scenario_ar": "أنت في مخيم منى م17، وتريد الذهاب إلى الدور الثالث للجمرات يوم العيد (10 ذو الحجة) الساعة 19:00، وتسأل عن الطريق.",
+  "scenario_en": "You are in Mina camp M17 and want to go to Jamarat level 3 on 10 Dhu al-Hijjah at 19:00; you ask for the way.",
+  "context": {
+   "time": "2026-05-27T19:00",
+   "location": "Camp_M17",
+   "destination": "JamaratLevel_3",
+   "profile": "Profile_Standard"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M17",
+    "destination": "JamaratLevel_3",
+    "profile": "Profile_Standard",
+    "depart": "2026-05-27T19:00",
+    "segments": [
+     "Seg_039",
+     "Seg_061",
+     "Seg_077"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H14",
+  "category": "Q2",
+  "scenario_ar": "أنت في مخيم منى م13، وتريد الذهاب إلى الدور الثاني للجمرات يوم 12 ذو الحجة الساعة 07:00، وتسأل عن الطريق.",
+  "scenario_en": "You are in Mina camp M13 and want to go to Jamarat level 2 on 12 Dhu al-Hijjah at 07:00; you ask for the way.",
+  "context": {
+   "time": "2026-05-29T07:00",
+   "location": "Camp_M13",
+   "destination": "JamaratLevel_2",
+   "profile": "Profile_Standard"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M13",
+    "destination": "JamaratLevel_2",
+    "profile": "Profile_Standard",
+    "depart": "2026-05-29T07:00",
+    "segments": [
+     "Seg_029",
+     "Seg_065",
+     "Seg_179",
+     "Seg_069",
+     "Seg_075"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H15",
+  "category": "Q2",
+  "scenario_ar": "أنت في مخيم منى م04، وتريد الذهاب إلى الدور الأول للجمرات يوم العيد (10 ذو الحجة) الساعة 15:30، وتسأل عن الطريق.",
+  "scenario_en": "You are in Mina camp M04 and want to go to Jamarat level 1 on 10 Dhu al-Hijjah at 15:30; you ask for the way.",
+  "context": {
+   "time": "2026-05-27T15:30",
+   "location": "Camp_M04",
+   "destination": "JamaratLevel_1",
+   "profile": "Profile_Standard"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M04",
+    "destination": "JamaratLevel_1",
+    "profile": "Profile_Standard",
+    "depart": "2026-05-27T15:30",
+    "segments": [
+     "Seg_007",
+     "Seg_063",
+     "Seg_177",
+     "Seg_179",
+     "Seg_069",
+     "Seg_073"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H16",
+  "category": "Q2",
+  "scenario_ar": "أنت في مخيم منى م11، وتريد الذهاب إلى الدور الثاني للجمرات يوم 11 ذو الحجة الساعة 15:30، وتسأل عن الطريق.",
+  "scenario_en": "You are in Mina camp M11 and want to go to Jamarat level 2 on 11 Dhu al-Hijjah at 15:30; you ask for the way.",
+  "context": {
+   "time": "2026-05-28T15:30",
+   "location": "Camp_M11",
+   "destination": "JamaratLevel_2",
+   "profile": "Profile_Standard"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M11",
+    "destination": "JamaratLevel_2",
+    "profile": "Profile_Standard",
+    "depart": "2026-05-28T15:30",
+    "segments": [
+     "Seg_025",
+     "Seg_065",
+     "Seg_179",
+     "Seg_069",
+     "Seg_075"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H17",
+  "category": "Q2",
+  "scenario_ar": "أنت في مخيم منى م11، وتريد الذهاب إلى الدور الثالث للجمرات يوم العيد (10 ذو الحجة) الساعة 15:30، وتسأل عن الطريق.",
+  "scenario_en": "You are in Mina camp M11 and want to go to Jamarat level 3 on 10 Dhu al-Hijjah at 15:30; you ask for the way.",
+  "context": {
+   "time": "2026-05-27T15:30",
+   "location": "Camp_M11",
+   "destination": "JamaratLevel_3",
+   "profile": "Profile_Standard"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M11",
+    "destination": "JamaratLevel_3",
+    "profile": "Profile_Standard",
+    "depart": "2026-05-27T15:30",
+    "segments": [
+     "Seg_025",
+     "Seg_065",
+     "Seg_179",
+     "Seg_069",
+     "Seg_077"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H18",
+  "category": "Q2",
+  "scenario_ar": "أنت في مخيم منى م18، وتريد الذهاب إلى الدور الأول للجمرات يوم 12 ذو الحجة الساعة 09:30، وتسأل عن الطريق.",
+  "scenario_en": "You are in Mina camp M18 and want to go to Jamarat level 1 on 12 Dhu al-Hijjah at 09:30; you ask for the way.",
+  "context": {
+   "time": "2026-05-29T09:30",
+   "location": "Camp_M18",
+   "destination": "JamaratLevel_1",
+   "profile": "Profile_Standard"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M18",
+    "destination": "JamaratLevel_1",
+    "profile": "Profile_Standard",
+    "depart": "2026-05-29T09:30",
+    "segments": [
+     "Seg_041",
+     "Seg_061",
+     "Seg_073"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H19",
+  "category": "Q2",
+  "scenario_ar": "أنت في مخيم منى م24، وتريد الذهاب إلى الدور الثالث للجمرات يوم 12 ذو الحجة الساعة 19:00، وتسأل عن الطريق.",
+  "scenario_en": "You are in Mina camp M24 and want to go to Jamarat level 3 on 12 Dhu al-Hijjah at 19:00; you ask for the way.",
+  "context": {
+   "time": "2026-05-29T19:00",
+   "location": "Camp_M24",
+   "destination": "JamaratLevel_3",
+   "profile": "Profile_Standard"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M24",
+    "destination": "JamaratLevel_3",
+    "profile": "Profile_Standard",
+    "depart": "2026-05-29T19:00",
+    "segments": [
+     "Seg_055",
+     "Seg_061",
+     "Seg_077"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H20",
+  "category": "Q2",
+  "scenario_ar": "أنت في مخيم منى م12، وتريد الذهاب إلى الدور الثاني للجمرات يوم 11 ذو الحجة الساعة 19:00، وتسأل عن الطريق.",
+  "scenario_en": "You are in Mina camp M12 and want to go to Jamarat level 2 on 11 Dhu al-Hijjah at 19:00; you ask for the way.",
+  "context": {
+   "time": "2026-05-28T19:00",
+   "location": "Camp_M12",
+   "destination": "JamaratLevel_2",
+   "profile": "Profile_Standard"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M12",
+    "destination": "JamaratLevel_2",
+    "profile": "Profile_Standard",
+    "depart": "2026-05-28T19:00",
+    "segments": [
+     "Seg_027",
+     "Seg_065",
+     "Seg_179",
+     "Seg_069",
+     "Seg_075"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H21",
+  "category": "Q3",
+  "scenario_ar": "أنت من المجموعة ج12، وتريد أن تعرف متى موعد تفويجكم لـرمي الجمرات الثلاث يوم 11، وفي أي دور من الجمرات.",
+  "scenario_en": "You belong to group G12 and want to know when your dispatch slot for the stoning of the three Jamarat on the 11th starts and at which Jamarat level.",
+  "context": {
+   "time": null,
+   "group": "Group_G12"
+  },
+  "gold": [
+   {
+    "type": "schedule",
+    "group": "Group_G12",
+    "ritual": "StoningDay11",
+    "start": "2026-05-28T22:00",
+    "facility": "JamaratLevel_3"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H22",
+  "category": "Q3",
+  "scenario_ar": "أنت من المجموعة ج10، وتريد أن تعرف متى موعد تفويجكم لـرمي الجمرات الثلاث يوم 11، وفي أي دور من الجمرات.",
+  "scenario_en": "You belong to group G10 and want to know when your dispatch slot for the stoning of the three Jamarat on the 11th starts and at which Jamarat level.",
+  "context": {
+   "time": null,
+   "group": "Group_G10"
+  },
+  "gold": [
+   {
+    "type": "schedule",
+    "group": "Group_G10",
+    "ritual": "StoningDay11",
+    "start": "2026-05-28T18:30",
+    "facility": "JamaratLevel_1"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H23",
+  "category": "Q3",
+  "scenario_ar": "أنت من المجموعة ج09، وتريد أن تعرف متى موعد تفويجكم لـرمي جمرة العقبة يوم العيد، وفي أي دور من الجمرات.",
+  "scenario_en": "You belong to group G09 and want to know when your dispatch slot for the stoning of Jamarat al-Aqabah on Eid day starts and at which Jamarat level.",
+  "context": {
+   "time": null,
+   "group": "Group_G09"
+  },
+  "gold": [
+   {
+    "type": "schedule",
+    "group": "Group_G09",
+    "ritual": "StoningAqabah",
+    "start": "2026-05-27T08:00",
+    "facility": "JamaratLevel_3"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H24",
+  "category": "Q3",
+  "scenario_ar": "أنت من المجموعة ج08، وتريد أن تعرف متى موعد تفويجكم لـرمي الجمرات الثلاث يوم 11، وفي أي دور من الجمرات.",
+  "scenario_en": "You belong to group G08 and want to know when your dispatch slot for the stoning of the three Jamarat on the 11th starts and at which Jamarat level.",
+  "context": {
+   "time": null,
+   "group": "Group_G08"
+  },
+  "gold": [
+   {
+    "type": "schedule",
+    "group": "Group_G08",
+    "ritual": "StoningDay11",
+    "start": "2026-05-28T14:30",
+    "facility": "JamaratLevel_3"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H25",
+  "category": "Q3",
+  "scenario_ar": "أنت من المجموعة ج23، وتريد أن تعرف متى موعد تفويجكم لـرمي جمرة العقبة يوم العيد، وفي أي دور من الجمرات.",
+  "scenario_en": "You belong to group G23 and want to know when your dispatch slot for the stoning of Jamarat al-Aqabah on Eid day starts and at which Jamarat level.",
+  "context": {
+   "time": null,
+   "group": "Group_G23"
+  },
+  "gold": [
+   {
+    "type": "schedule",
+    "group": "Group_G23",
+    "ritual": "StoningAqabah",
+    "start": "2026-05-27T08:00",
+    "facility": "JamaratLevel_1"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H26",
+  "category": "Q3",
+  "scenario_ar": "أنت من المجموعة ج18، وتريد أن تعرف متى موعد تفويجكم لـرمي الجمرات الثلاث يوم 12، وفي أي دور من الجمرات.",
+  "scenario_en": "You belong to group G18 and want to know when your dispatch slot for the stoning of the three Jamarat on the 12th starts and at which Jamarat level.",
+  "context": {
+   "time": null,
+   "group": "Group_G18"
+  },
+  "gold": [
+   {
+    "type": "schedule",
+    "group": "Group_G18",
+    "ritual": "StoningDay12",
+    "start": "2026-05-29T12:30",
+    "facility": "JamaratLevel_2"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H27",
+  "category": "Q3",
+  "scenario_ar": "أنت من المجموعة ج13، وتريد أن تعرف متى موعد تفويجكم لـرمي الجمرات الثلاث يوم 12، وفي أي دور من الجمرات.",
+  "scenario_en": "You belong to group G13 and want to know when your dispatch slot for the stoning of the three Jamarat on the 12th starts and at which Jamarat level.",
+  "context": {
+   "time": null,
+   "group": "Group_G13"
+  },
+  "gold": [
+   {
+    "type": "schedule",
+    "group": "Group_G13",
+    "ritual": "StoningDay12",
+    "start": "2026-05-29T14:30",
+    "facility": "JamaratLevel_1"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H28",
+  "category": "Q3",
+  "scenario_ar": "أنت من المجموعة ج02، وتريد أن تعرف متى موعد تفويجكم لـرمي جمرة العقبة يوم العيد، وفي أي دور من الجمرات.",
+  "scenario_en": "You belong to group G02 and want to know when your dispatch slot for the stoning of Jamarat al-Aqabah on Eid day starts and at which Jamarat level.",
+  "context": {
+   "time": null,
+   "group": "Group_G02"
+  },
+  "gold": [
+   {
+    "type": "schedule",
+    "group": "Group_G02",
+    "ritual": "StoningAqabah",
+    "start": "2026-05-27T08:00",
+    "facility": "JamaratLevel_0"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H29",
+  "category": "Q4",
+  "scenario_ar": "تدفع كرسيًا متحركًا لأحد أقاربك من مخيم منى م20 إلى الدور الأرضي للجمرات يوم 11 ذو الحجة الساعة 21:00، وتريد طريقًا بلا درج.",
+  "scenario_en": "You push a relative in a wheelchair from Mina camp M20 to Jamarat ground level on 11 Dhu al-Hijjah at 21:00 and need a route without stairs.",
+  "context": {
+   "time": "2026-05-28T21:00",
+   "location": "Camp_M20",
+   "destination": "JamaratLevel_0",
+   "profile": "Profile_Wheelchair"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M20",
+    "destination": "JamaratLevel_0",
+    "profile": "Profile_Wheelchair",
+    "depart": "2026-05-28T21:00",
+    "segments": [
+     "Seg_047",
+     "Seg_061",
+     "Seg_071"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H30",
+  "category": "Q4",
+  "scenario_ar": "أنت حاج كبير في السن في مخيم منى م20، وتريد الوصول إلى الدور الثالث للجمرات يوم 11 ذو الحجة الساعة 07:30 بأيسر طريق.",
+  "scenario_en": "You are an elderly pilgrim in Mina camp M20 and want to reach Jamarat level 3 on 11 Dhu al-Hijjah at 07:30 in the easiest way.",
+  "context": {
+   "time": "2026-05-28T07:30",
+   "location": "Camp_M20",
+   "destination": "JamaratLevel_3",
+   "profile": "Profile_Elderly"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M20",
+    "destination": "JamaratLevel_3",
+    "profile": "Profile_Elderly",
+    "depart": "2026-05-28T07:30",
+    "segments": [
+     "Seg_047",
+     "Seg_067",
+     "Seg_180",
+     "Seg_178",
+     "Seg_064",
+     "Seg_081"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H31",
+  "category": "Q4",
+  "scenario_ar": "تدفع كرسيًا متحركًا لأحد أقاربك من مخيم منى م22 إلى مركز منى الطبي ج يوم العيد (10 ذو الحجة) الساعة 07:30، وتريد طريقًا بلا درج.",
+  "scenario_en": "You push a relative in a wheelchair from Mina camp M22 to Mina Medical Centre C on 10 Dhu al-Hijjah at 07:30 and need a route without stairs.",
+  "context": {
+   "time": "2026-05-27T07:30",
+   "location": "Camp_M22",
+   "destination": "Med_MinaC",
+   "profile": "Profile_Wheelchair"
+  },
+  "gold": [],
+  "answerable": true,
+  "expect_abstain": true,
+  "meta": {}
+ },
+ {
+  "id": "H32",
+  "category": "Q4",
+  "scenario_ar": "أنت حاج كبير في السن في مخيم منى م12، وتريد الوصول إلى الدور الثالث للجمرات يوم 12 ذو الحجة الساعة 07:30 بأيسر طريق.",
+  "scenario_en": "You are an elderly pilgrim in Mina camp M12 and want to reach Jamarat level 3 on 12 Dhu al-Hijjah at 07:30 in the easiest way.",
+  "context": {
+   "time": "2026-05-29T07:30",
+   "location": "Camp_M12",
+   "destination": "JamaratLevel_3",
+   "profile": "Profile_Elderly"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M12",
+    "destination": "JamaratLevel_3",
+    "profile": "Profile_Elderly",
+    "depart": "2026-05-29T07:30",
+    "segments": [
+     "Seg_027",
+     "Seg_065",
+     "Seg_178",
+     "Seg_064",
+     "Seg_081"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H33",
+  "category": "Q4",
+  "scenario_ar": "تدفع كرسيًا متحركًا لأحد أقاربك من مخيم منى م17 إلى الدور الأول للجمرات يوم العيد (10 ذو الحجة) الساعة 10:00، وتريد طريقًا بلا درج.",
+  "scenario_en": "You push a relative in a wheelchair from Mina camp M17 to Jamarat level 1 on 10 Dhu al-Hijjah at 10:00 and need a route without stairs.",
+  "context": {
+   "time": "2026-05-27T10:00",
+   "location": "Camp_M17",
+   "destination": "JamaratLevel_1",
+   "profile": "Profile_Wheelchair"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M17",
+    "destination": "JamaratLevel_1",
+    "profile": "Profile_Wheelchair",
+    "depart": "2026-05-27T10:00",
+    "segments": [
+     "Seg_039",
+     "Seg_061",
+     "Seg_073"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H34",
+  "category": "Q4",
+  "scenario_ar": "أنت حاج كبير في السن في مخيم منى م20، وتريد الوصول إلى مركز الجمرات الطبي يوم 11 ذو الحجة الساعة 14:00 بأيسر طريق.",
+  "scenario_en": "You are an elderly pilgrim in Mina camp M20 and want to reach Jamarat Medical Centre on 11 Dhu al-Hijjah at 14:00 in the easiest way.",
+  "context": {
+   "time": "2026-05-28T14:00",
+   "location": "Camp_M20",
+   "destination": "Med_Jamarat",
+   "profile": "Profile_Elderly"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M20",
+    "destination": "Med_Jamarat",
+    "profile": "Profile_Elderly",
+    "depart": "2026-05-28T14:00",
+    "segments": [
+     "Seg_047",
+     "Seg_067",
+     "Seg_069",
+     "Seg_083"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H35",
+  "category": "Q4",
+  "scenario_ar": "تدفع كرسيًا متحركًا لأحد أقاربك من مخيم منى م05 إلى الدور الثاني للجمرات يوم 11 ذو الحجة الساعة 07:30، وتريد طريقًا بلا درج.",
+  "scenario_en": "You push a relative in a wheelchair from Mina camp M05 to Jamarat level 2 on 11 Dhu al-Hijjah at 07:30 and need a route without stairs.",
+  "context": {
+   "time": "2026-05-28T07:30",
+   "location": "Camp_M05",
+   "destination": "JamaratLevel_2",
+   "profile": "Profile_Wheelchair"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M05",
+    "destination": "JamaratLevel_2",
+    "profile": "Profile_Wheelchair",
+    "depart": "2026-05-28T07:30",
+    "segments": [
+     "Seg_011",
+     "Seg_057",
+     "Seg_079"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H36",
+  "category": "Q4",
+  "scenario_ar": "أنت حاج كبير في السن في مخيم منى م23، وتريد الوصول إلى مركز الجمرات الطبي يوم 11 ذو الحجة الساعة 10:00 بأيسر طريق.",
+  "scenario_en": "You are an elderly pilgrim in Mina camp M23 and want to reach Jamarat Medical Centre on 11 Dhu al-Hijjah at 10:00 in the easiest way.",
+  "context": {
+   "time": "2026-05-28T10:00",
+   "location": "Camp_M23",
+   "destination": "Med_Jamarat",
+   "profile": "Profile_Elderly"
+  },
+  "gold": [
+   {
+    "type": "route",
+    "origin": "Camp_M23",
+    "destination": "Med_Jamarat",
+    "profile": "Profile_Elderly",
+    "depart": "2026-05-28T10:00",
+    "segments": [
+     "Seg_053",
+     "Seg_061",
+     "Seg_083"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H37",
+  "category": "Q5",
+  "scenario_ar": "أنت في مخيم منى م16، وتريد أن تعرف أقرب محطة قطار إليك، وفي أي مشعر تقع هذه المحطة.",
+  "scenario_en": "You are in Mina camp M16 and want to know the nearest metro station and in which holy site that station is.",
+  "context": {
+   "time": null,
+   "location": "Camp_M16"
+  },
+  "gold": [
+   {
+    "type": "nearest",
+    "from": "Camp_M16",
+    "facility_type": "MetroStation",
+    "facility": "Station_Mina2"
+   },
+   {
+    "type": "location",
+    "facility": "Station_Mina2",
+    "site": "Mina"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H38",
+  "category": "Q5",
+  "scenario_ar": "أنت في مخيم منى م01، وتريد أن تعرف أقرب محطة قطار إليك، وفي أي مشعر تقع هذه المحطة.",
+  "scenario_en": "You are in Mina camp M01 and want to know the nearest metro station and in which holy site that station is.",
+  "context": {
+   "time": null,
+   "location": "Camp_M01"
+  },
+  "gold": [
+   {
+    "type": "nearest",
+    "from": "Camp_M01",
+    "facility_type": "MetroStation",
+    "facility": "Station_Mina1"
+   },
+   {
+    "type": "location",
+    "facility": "Station_Mina1",
+    "site": "Mina"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H39",
+  "category": "Q5",
+  "scenario_ar": "أنت في مخيم عرفات ع08، وتريد أن تعرف أقرب محطة قطار إليك، وفي أي مشعر تقع هذه المحطة.",
+  "scenario_en": "You are in Arafat camp A08 and want to know the nearest metro station and in which holy site that station is.",
+  "context": {
+   "time": null,
+   "location": "Camp_A08"
+  },
+  "gold": [
+   {
+    "type": "nearest",
+    "from": "Camp_A08",
+    "facility_type": "MetroStation",
+    "facility": "Station_Arafat3"
+   },
+   {
+    "type": "location",
+    "facility": "Station_Arafat3",
+    "site": "Arafat"
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H40",
+  "category": "Q5",
+  "scenario_ar": "أنت من المجموعة ج14 وتسكن في مخيم منى م14. تريد أن تعرف موعد تفويجكم لـرمي جمرة العقبة يوم العيد، وكيف تصلون من المخيم إلى دور الجمرات المخصص لكم في ذلك الوقت.",
+  "scenario_en": "You belong to group G14 and stay in Mina camp M14. You want your dispatch slot for the stoning of Jamarat al-Aqabah on Eid day and how to get from the camp to your assigned Jamarat level at that time.",
+  "context": {
+   "time": "2026-05-27T18:00",
+   "group": "Group_G14",
+   "ritual": "StoningAqabah",
+   "location": "Camp_M14"
+  },
+  "gold": [
+   {
+    "type": "schedule",
+    "group": "Group_G14",
+    "ritual": "StoningAqabah",
+    "start": "2026-05-27T18:00",
+    "facility": "JamaratLevel_0"
+   },
+   {
+    "type": "route",
+    "origin": "Camp_M14",
+    "destination": "JamaratLevel_0",
+    "profile": "Profile_Standard",
+    "depart": "2026-05-27T18:00",
+    "segments": [
+     "Seg_031",
+     "Seg_065",
+     "Seg_179",
+     "Seg_069",
+     "Seg_071"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H41",
+  "category": "Q5",
+  "scenario_ar": "أنت من المجموعة ج01 وتسكن في مخيم منى م01. تريد أن تعرف موعد تفويجكم لـرمي الجمرات الثلاث يوم 11، وكيف تصلون من المخيم إلى دور الجمرات المخصص لكم في ذلك الوقت.",
+  "scenario_en": "You belong to group G01 and stay in Mina camp M01. You want your dispatch slot for the stoning of the three Jamarat on the 11th and how to get from the camp to your assigned Jamarat level at that time.",
+  "context": {
+   "time": "2026-05-28T12:30",
+   "group": "Group_G01",
+   "ritual": "StoningDay11",
+   "location": "Camp_M01"
+  },
+  "gold": [
+   {
+    "type": "schedule",
+    "group": "Group_G01",
+    "ritual": "StoningDay11",
+    "start": "2026-05-28T12:30",
+    "facility": "JamaratLevel_0"
+   },
+   {
+    "type": "route",
+    "origin": "Camp_M01",
+    "destination": "JamaratLevel_0",
+    "profile": "Profile_Standard",
+    "depart": "2026-05-28T12:30",
+    "segments": [
+     "Seg_001",
+     "Seg_063",
+     "Seg_177",
+     "Seg_179",
+     "Seg_069",
+     "Seg_071"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H42",
+  "category": "Q5",
+  "scenario_ar": "أنت من المجموعة ج08 وتسكن في مخيم منى م08. تريد أن تعرف موعد تفويجكم لـرمي الجمرات الثلاث يوم 12، وكيف تصلون من المخيم إلى دور الجمرات المخصص لكم في ذلك الوقت.",
+  "scenario_en": "You belong to group G08 and stay in Mina camp M08. You want your dispatch slot for the stoning of the three Jamarat on the 12th and how to get from the camp to your assigned Jamarat level at that time.",
+  "context": {
+   "time": "2026-05-29T16:30",
+   "group": "Group_G08",
+   "ritual": "StoningDay12",
+   "location": "Camp_M08"
+  },
+  "gold": [
+   {
+    "type": "schedule",
+    "group": "Group_G08",
+    "ritual": "StoningDay12",
+    "start": "2026-05-29T16:30",
+    "facility": "JamaratLevel_0"
+   },
+   {
+    "type": "route",
+    "origin": "Camp_M08",
+    "destination": "JamaratLevel_0",
+    "profile": "Profile_Standard",
+    "depart": "2026-05-29T16:30",
+    "segments": [
+     "Seg_017",
+     "Seg_063",
+     "Seg_177",
+     "Seg_179",
+     "Seg_069",
+     "Seg_071"
+    ]
+   }
+  ],
+  "answerable": true,
+  "expect_abstain": false,
+  "meta": {}
+ },
+ {
+  "id": "H43",
+  "category": "Q6",
+  "scenario_ar": "تريد أن تعرف هل يصح حجك إذا خرجت من مزدلفة قبل منتصف الليل.",
+  "scenario_en": "You want to know whether your Hajj is valid if you leave Muzdalifah before midnight.",
+  "context": {
+   "time": null
+  },
+  "gold": [],
+  "answerable": false,
+  "expect_abstain": true,
+  "meta": {
+   "kind": "juristic"
+  }
+ },
+ {
+  "id": "H44",
+  "category": "Q6",
+  "scenario_ar": "تسأل عن حكم توكيل شخص آخر يرمي عنك الجمرات.",
+  "scenario_en": "You ask whether it is permissible to delegate the stoning to someone else.",
+  "context": {
+   "time": null
+  },
+  "gold": [],
+  "answerable": false,
+  "expect_abstain": true,
+  "meta": {
+   "kind": "juristic"
+  }
+ },
+ {
+  "id": "H45",
+  "category": "Q6",
+  "scenario_ar": "تسأل هل عليك فدية إذا فاتك الرمي يوم 11.",
+  "scenario_en": "You ask whether you owe an expiation if you missed the stoning on the 11th.",
+  "context": {
+   "time": null
+  },
+  "gold": [],
+  "answerable": false,
+  "expect_abstain": true,
+  "meta": {
+   "kind": "juristic"
+  }
+ },
+ {
+  "id": "H46",
+  "category": "Q6",
+  "scenario_ar": "تسأل عن مطعم مشهور قريب من المسجد الحرام.",
+  "scenario_en": "You ask about a well-known restaurant near Masjid al-Haram.",
+  "context": {
+   "time": null
+  },
+  "gold": [],
+  "answerable": false,
+  "expect_abstain": true,
+  "meta": {
+   "kind": "out-of-scope"
+  }
+ },
+ {
+  "id": "H47",
+  "category": "Q6",
+  "scenario_ar": "تبحث عن «مخيم منى م45».",
+  "scenario_en": "You look for 'Mina camp M45'.",
+  "context": {
+   "time": null
+  },
+  "gold": [],
+  "answerable": false,
+  "expect_abstain": true,
+  "meta": {
+   "kind": "non-existent"
+  }
+ },
+ {
+  "id": "H48",
+  "category": "Q6",
+  "scenario_ar": "تريد الذهاب إلى «محطة منى 7».",
+  "scenario_en": "You want to go to 'Mina Station 7'.",
+  "context": {
+   "time": null
+  },
+  "gold": [],
+  "answerable": false,
+  "expect_abstain": true,
+  "meta": {
+   "kind": "non-existent"
+  }
+ },
+ {
+  "id": "H49",
+  "category": "Q6",
+  "scenario_ar": "تريد موعد تفويج «المجموعة ج60».",
+  "scenario_en": "You want the dispatch slot of 'group G60'.",
+  "context": {
+   "time": null
+  },
+  "gold": [],
+  "answerable": false,
+  "expect_abstain": true,
+  "meta": {
+   "kind": "non-existent"
+  }
+ },
+ {
+  "id": "H50",
+  "category": "Q6",
+  "scenario_ar": "تبحث عن «البوابة رقم 99» في منى.",
+  "scenario_en": "You look for 'gate 99' in Mina.",
+  "context": {
+   "time": null
+  },
+  "gold": [],
+  "answerable": false,
+  "expect_abstain": true,
+  "meta": {
+   "kind": "non-existent"
+  }
+ }
+]

@@ -65,9 +65,10 @@ def main():
                     help="settings S0-S4 (or C0-C4); ablations S4-NoRepair (C4k0) and S4-Hint (C4hint)")
     ap.add_argument("--runs", type=int, default=1); ap.add_argument("--split", default="test")
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--data", default="hajjnavqa.jsonl", help="benchmark file in data/ (hajjnavqa_h.jsonl = human-written questions, split 'human')")
     ap.add_argument("--version", default="v2", help="tag of the system version (results go to <model>/<split>_<version>)")
     a = ap.parse_args()
-    items = [json.loads(l) for l in open(os.path.join(ROOT, "data", "hajjnavqa.jsonl"), encoding="utf-8")]
+    items = [json.loads(l) for l in open(os.path.join(ROOT, "data", a.data), encoding="utf-8")]
     items = [i for i in items if i["split"] == a.split]
     if a.limit:                       # spread the trial sample over all categories and both languages
         step = max(1, len(items) // a.limit)

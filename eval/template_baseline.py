@@ -59,11 +59,14 @@ class TemplateRenderer:
 
 
 def main():
+    import argparse
+    ap = argparse.ArgumentParser(); ap.add_argument("--data", default="hajjnavqa.jsonl"); ap.add_argument("--split", default="test")
+    a = ap.parse_args()
     kg = load()
     sys_ = OntoHajj(TemplateRenderer(kg))
-    items = [json.loads(l) for l in open(os.path.join(ROOT, "data", "hajjnavqa.jsonl"), encoding="utf-8")]
-    items = [i for i in items if i["split"] == "test"]
-    outdir = os.path.join(ROOT, "results", "llm", "template", "test_v2"); os.makedirs(outdir, exist_ok=True)
+    items = [json.loads(l) for l in open(os.path.join(ROOT, "data", a.data), encoding="utf-8")]
+    items = [i for i in items if i["split"] == a.split]
+    outdir = os.path.join(ROOT, "results", "llm", "template", f"{a.split}_v2"); os.makedirs(outdir, exist_ok=True)
     with open(os.path.join(outdir, "C4_run0.jsonl"), "w", encoding="utf-8") as f:
         for it in items:
             rec = sys_.answer(it["question"], it["context"], "C4", it["lang"])

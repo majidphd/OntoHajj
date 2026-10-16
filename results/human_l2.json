@@ -1,0 +1,21 @@
+{
+ "intent_accuracy": 0.5238,
+ "intent_n": 42,
+ "intent_by_category": {
+  "Q1": "6/10",
+  "Q2": "3/10",
+  "Q3": "7/8",
+  "Q4": "2/8",
+  "Q5": "4/6"
+ },
+ "confusions": {
+  "Location->Procedural": 4,
+  "Route->Procedural": 7,
+  "Temporal->Procedural": 1,
+  "Accessibility->Route": 4,
+  "Accessibility->Procedural": 2,
+  "MultiHop->Temporal": 2
+ },
+ "nonexistent_detected": "2/4",
+ "false_unresolved_on_answerable": 1
+}

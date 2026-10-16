@@ -64,6 +64,12 @@ python eval/summarise_llm.py openai_gpt-oss-120b/test_v2
 ```
 `--limit 100` draws the same stratified 100-question subset used for the ablations. Never commit an API key.
 
+## Human-written questions (HajjNavQA-H)
+`data/hajjnavqa_h.jsonl` contains 50 questions written by seven writers in their own words (Arabic dialects and
+English) from scenario cards (`bench/human_scenarios.json`, built by `bench/build_human_scenarios.py`); gold claims are
+computed from the knowledge graph as for HajjNavQA. Run with `--data hajjnavqa_h.jsonl --split human`
+(`notebooks/human_eval_colab.ipynb`); `eval/human_l2_analysis.py` reports L2 on these questions.
+
 ## Manual check of the benchmark
 `bench/annotation_sample_ids.txt` lists the 100 test questions (random, seed 2026) checked by two
 annotators; agreement is reported as Cohen's kappa.
