@@ -110,9 +110,13 @@ benchmark whose random choices can differ with the Python hash seed.
 
 `python eval/test_connection.py <model>` checks the server and runs one question end to end.
 
+## Supplementary Material
+
+`docs/OntoHajj_Supplementary_Material.pdf` (and `.docx`) is the Supplementary Material of the article: object properties and metrics of the ontology (S1), the inference algorithm (S2), the LLM-judge baseline of E3 (S3), the free-text consistency checks including the discarded first judge run (S4), the error analysis of S4 (S5), the route-ranking policies (S6), and the GPU timing (S7).
+
 ## Version history
 - v1: first pilot (20 questions). Route and schedule claims of a 7B model failed format checks, causing over-abstention.
-- v2: facts carry ISO timestamps; L3/L4 attach ready-made claims in the HNO output schema (route claims list
+- Interface v2 (pipeline revision, not a release number): facts carry ISO timestamps; L3/L4 attach ready-made claims in the HNO output schema (route claims list
   segment identifiers); identifier-like tokens must match exactly when resolving names; every verification
   attempt is logged. Results are written to `results/llm/<model>/<split>_v2/`.
 
